@@ -1,15 +1,18 @@
 /* Clovity Federal - custom styles that Tailwind utilities don't cover */
 
 
-/* Site palette as RGB triplets (used by tw-config.js), taken from the Clovity Federal logo:
-   navy #04213F for headings and dark areas, a lighter blue (#2E75B6) for links and small highlights,
-   light blue section backgrounds behind (paper #F3F7FD, sand #ECF3FC), tinted from the navy so they read as blue rather than grey. */
+/* Site palette as RGB triplets (used by tw-config.js), in the style of easydmarc.com:
+   midnight navy #0A1433 for headings and dark areas, royal blue #1F3D99 for raised dark panels,
+   electric blue #3366FF for buttons (#2952CC for links/labels so text stays 4.5:1 on white),
+   cool periwinkle section backgrounds (paper #F7F9FD, sand #EBF0FF) with #D6E0FF tints and borders. */
 :root {
-  --ink-950: 3 24 46;   --ink-900: 4 33 63;   --steel-700: 22 52 88;
-  --accent: 46 117 182; --accent-dark: 39 104 165; --accent-light: 147 197 253; --accent-50: 234 240 247;
-  --panel: 238 244 252; --tint: 223 231 241; --paper: 243 247 253; --sand: 236 243 252;
-  /* Buttons stay federal blue whatever the accent theme */
-  --btn: 74 144 217; --btn-dark: 61 130 196;
+  --ink-950: 8 16 44;   --ink-900: 10 20 51;   --steel-700: 31 61 153;
+  --accent: 41 82 204;  --accent-dark: 31 61 153; --accent-light: 133 163 255; --accent-50: 235 240 255;
+  --panel: 245 247 255; --tint: 214 224 255; --paper: 247 249 253; --sand: 235 240 255;
+  /* Buttons stay electric blue whatever the accent theme */
+  --btn: 51 102 255; --btn-dark: 41 82 204;
+  /* Brand gradient pair: royal blue into violet, used for dark sections and highlights */
+  --grad-from: 26 51 128; --grad-violet: 160 18 255;
 }
 /* Accent themes (switcher, bottom-left): navy structure stays, only the accent changes.
    Every accent passes 4.5:1 on white; the light tone passes on navy. "navy" is the federal blue option. */
@@ -30,8 +33,8 @@ body { -webkit-font-smoothing: antialiased; overflow-x: clip; }
 
 /* Hero video: real footage, slightly muted so text stays readable */
 .hero-video { filter: saturate(.95) brightness(1.08); }
-/* Banner overlays: even 45% shade of a soft, mostly neutral dark so white text reads over the video */
-.hero-overlay, .page-hero-overlay { background: rgba(15,23,35,.55); }
+/* Banner overlays: midnight navy at both edges around a royal blue centre so white text reads over the video; the right edge is a little lighter */
+.hero-overlay, .page-hero-overlay { background: linear-gradient(100deg, rgb(var(--ink-900) / .82) 0%, rgb(var(--grad-from) / .55) 50%, rgb(var(--ink-900) / .65) 100%); }
 
 
 /* Subtle dotted grid used on light sections */
@@ -39,9 +42,17 @@ body { -webkit-font-smoothing: antialiased; overflow-x: clip; }
   background-image: radial-gradient(rgba(22,22,24,.09) 1px, transparent 1px);
   background-size: 22px 22px;
 }
-/* Light blue sections get a faint wash of the icon colours in opposite corners (teal top left, violet bottom right) */
-section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rgb(13 148 136 / .08), transparent 70%),
-  radial-gradient(ellipse 45% 55% at 100% 100%, rgb(124 58 237 / .07), transparent 70%); }
+/* Light blue sections get a faint wash in opposite corners (electric blue top left, violet bottom right) */
+section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rgb(var(--btn) / .10), transparent 70%),
+  radial-gradient(ellipse 45% 55% at 100% 100%, rgb(var(--grad-violet) / .07), transparent 70%); }
+/* White and paper sections fade from white into the periwinkle tint, like the reference's card backgrounds */
+section.bg-paper { background-image: linear-gradient(160deg, #fff 10%, rgb(var(--panel)) 95%); }
+/* Dark CTA boxes: midnight navy sweeping into royal blue */
+div.bg-ink-900.rounded-lg { background-image: linear-gradient(100deg, rgb(var(--ink-900)) 15%, rgb(var(--grad-from)) 75%, rgb(var(--steel-700)) 100%); }
+/* Footer keeps the original Clovity Federal logo palette (solid navy #04213F, light blue accents) */
+footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
+  --accent: 46 117 182; --accent-dark: 39 104 165; --accent-light: 147 197 253; --accent-50: 234 240 247;
+  --btn: 74 144 217; --btn-dark: 61 130 196; }
 .dot-grid-dark {
   background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
   background-size: 22px 22px;
@@ -66,12 +77,15 @@ section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rg
 .has-menu:hover .mega, .has-menu:focus-within .mega { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
 .has-menu:hover .nav-link svg, .has-menu:focus-within .nav-link svg { transform: rotate(180deg); }
 .nav-link svg { transition: transform .2s ease; }
-.dropdown { border-radius: .5rem; background: #fff; padding: .5rem; box-shadow: 0 2px 4px rgba(4,33,63,.06), 0 24px 48px -20px rgba(4,33,63,.35); }
+.dropdown { border-radius: .5rem; background: #fff; padding: .5rem; box-shadow: 0 2px 4px rgba(10,20,51,.06), 0 24px 48px -20px rgba(10,20,51,.35); gap: 8px; display: flex; flex-direction: column; }
+.dropdown-grid{display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));}
 .dd-item { display: block; border-radius: .7rem; padding: .7rem 1rem; color: rgb(var(--ink-900)); font-weight: 500; transition: background .15s, color .15s; }
-.dd-item:hover { background: rgb(var(--sand)); color: rgb(var(--accent)); }
-.dd-rich { display: flex; gap: .9rem; align-items: flex-start; }
+.dd-item:hover, .dd-item.is-current { background: rgb(var(--sand)); color: rgb(var(--accent)); }
+.dd-rich { display: flex; gap: .9rem; align-items: center; }
 .dd-icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; flex-shrink: 0; border-radius: .7rem; background: rgb(var(--accent-50)); color: #000; }
-.dd-rich:hover .dd-icon { background: rgb(var(--accent)); color: #fff; }
+/* The open page's submenu link (main.js .is-current) looks the same as a hovered one */
+.dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon { background: rgb(var(--accent)); color: #fff; }
+.m-group a.is-current { color: rgb(var(--accent)); font-weight: 600; }
 
 /* Mobile menu groups */
 .m-group, .m-link { border-bottom: 1px solid rgb(var(--ink-900) / .08); }
@@ -167,7 +181,7 @@ section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rg
 /* Execution steps: bento grid of photo cards. Deliverables slide up on hover/focus where hover exists, always shown on touch */
 .bento { display: grid; gap: 1.25rem; }
 .bento-card { position: relative; isolation: isolate; min-height: 22rem; overflow: hidden; border-radius: .5rem; background: rgb(var(--ink-950)); color: #fff;
-  box-shadow: 0 24px 50px -30px rgba(4,33,63,.55); }
+  box-shadow: 0 24px 50px -30px rgba(10,20,51,.55); }
 .bento-card:focus-visible { outline: 3px solid rgb(var(--accent) / .5); outline-offset: 3px; }
 .bento-card img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
 .bento-card:hover img, .bento-card:focus-within img { transform: scale(1.06); }
@@ -205,7 +219,7 @@ section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rg
 .sv-green { --tone: 22 163 74; --tone-50: 226 246 232; }
 .sv-flow { fill: none; stroke: rgb(var(--tone, var(--accent))); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 6 14; animation: sv-flow 1.6s linear infinite; }
 .sv-card { fill: #fff; stroke: rgb(var(--ink-900) / .08); }
-.sv-card-g { filter: drop-shadow(0 8px 14px rgba(4,33,63,.12)); }
+.sv-card-g { filter: drop-shadow(0 8px 14px rgba(10,20,51,.12)); }
 .sv-chip { fill: rgb(var(--tone-50, var(--accent-50))); }
 .sv-accent { fill: rgb(var(--tone, var(--accent))); }
 .sv-ink { fill: rgb(var(--ink-900)); }
@@ -325,7 +339,7 @@ section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rg
 .carousel.is-ready .carousel-stage { position: relative; display: block; overflow: visible; touch-action: pan-y; }
 .carousel.is-ready .carousel-card { position: absolute; top: 0; left: 50%; width: var(--cw); margin-left: calc(var(--cw) / -2);
   transition: transform .6s cubic-bezier(.22,.61,.36,1), opacity .5s ease, box-shadow .4s ease; cursor: pointer; }
-.carousel.is-ready .carousel-card.is-active { cursor: default; box-shadow: 0 2px 4px rgba(16,16,20,.05), 0 30px 60px -30px rgba(4,33,63,.35); }
+.carousel.is-ready .carousel-card.is-active { cursor: default; box-shadow: 0 2px 4px rgba(16,16,20,.05), 0 30px 60px -30px rgba(10,20,51,.35); }
 @media (min-width: 1024px) { .carousel { --cw: calc((100% - 3rem) / 3); --cgap: 1.5rem; } }
 /* Controls: filled navy arrows, dots that stretch into an accent bar for the active slide */
 .carousel-btn { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 999px; background: rgb(var(--ink-900)); color: #fff; transition: background .2s ease, transform .2s ease; }
@@ -414,8 +428,8 @@ html.lenis, html.lenis body { height: auto; }
 :is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon :is(.a, .af) { stroke: currentColor; }
 :is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon .af { fill: currentColor; stroke: none; }
 /* Where the icon sits on the accent or turns accent on hover, the accent takes the icon colour so it stays visible */
-:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .a { stroke: currentColor; }
-:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .af { fill: currentColor; }
+:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .a { stroke: currentColor; }
+:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .af { fill: currentColor; }
 /* On navy, the lighter accent tint reads better */
 :is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .a { stroke: rgb(var(--accent-light)); }
 :is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .af { fill: rgb(var(--accent-light)); }
@@ -472,7 +486,9 @@ li > svg.cf-icon.h-5.w-5[data-icon="circle-alert"] { width: 1.75rem; height: 1.7
   .sector.is-active .sector-panel { animation: sector-in .35s ease both; }
 }
 @media (min-width: 1024px) { .sector-tabbar { display: none; } }
-/* Home hero highlight: a light tint of the accent blue, with a soft dark shadow to keep it crisp over the bright frames */
-.hero-accent { color: color-mix(in srgb, rgb(var(--accent)) 55%, #fff); text-shadow: 0 2px 18px rgb(var(--ink-950) / .45); }
+/* Home hero highlight: light blue into soft violet gradient text, with a dark shadow to keep it crisp over the bright frames */
+.hero-accent { color: rgb(var(--accent-light)); background: linear-gradient(90deg, rgb(var(--accent-light)), #C9A2FF);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 12px rgb(var(--ink-950) / .5)); }
 /* Statement key phrases: accent blue even without animations (the scroll fill takes over when GSAP runs) */
 [data-fill] [data-key] { color: rgb(var(--accent)); }

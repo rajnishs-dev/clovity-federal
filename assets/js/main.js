@@ -39,6 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', update, { passive: true });
   }
 
+  // Submenu links (desktop dropdowns and mobile groups) for the open page keep their hover look. On a page whose
+  // sections are linked by #hash, the matching section wins; without a hash, the plain page link does.
+  const subLinks = document.querySelectorAll('#site-header .dd-item, #mobile-menu .m-group a');
+  const markCurrent = () => {
+    const page = location.pathname.split('/').pop() || 'index.html';
+    const onPage = [...subLinks].filter(a => (new URL(a.href).pathname.split('/').pop() || 'index.html') === page);
+    const hashed = onPage.filter(a => a.hash && a.hash === location.hash);
+    const current = hashed.length ? hashed : onPage.filter(a => !a.hash);
+    subLinks.forEach(a => {
+      const on = current.includes(a);
+      a.classList.toggle('is-current', on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+  };
+  markCurrent();
+  window.addEventListener('hashchange', markCurrent);
+
   // Mobile menu: slides down from under the header over a dimmed overlay (styles in site.css)
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
