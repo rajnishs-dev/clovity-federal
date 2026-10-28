@@ -33,8 +33,8 @@ body { -webkit-font-smoothing: antialiased; overflow-x: clip; }
 
 /* Hero video: real footage, slightly muted so text stays readable */
 .hero-video { filter: saturate(.95) brightness(1.08); }
-/* Banner overlays: midnight navy at both edges around a royal blue centre so white text reads over the video; the right edge is a little lighter */
-.hero-overlay, .page-hero-overlay { background: linear-gradient(100deg, rgb(var(--ink-900) / .82) 0%, rgb(var(--grad-from) / .55) 50%, rgb(var(--ink-900) / .65) 100%); }
+/* Banner overlays: navy mixed 50/50 with black at both edges around a darkened royal blue centre so white text reads over the video; the right edge is a little lighter */
+.hero-overlay, .page-hero-overlay { background: linear-gradient(100deg, rgb(5 10 26 / .65) 0%, rgb(13 26 64 / .40) 50%, rgb(5 10 26 / .50) 100%); }
 
 
 /* Subtle dotted grid used on light sections */
@@ -139,13 +139,12 @@ footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
 }
 .sector-label {
   display: inline-flex; align-items: center; gap: .6rem; border-radius: .6rem;
-  background: rgb(var(--accent)); padding: .6rem 1rem; font-weight: 600; white-space: nowrap;
+  background: #fff; color: rgb(var(--steel-700)); padding: .6rem 1rem; font-weight: 600; white-space: nowrap;
 }
 .sector-expand {
   display: grid; place-items: center; width: 2.75rem; height: 2.75rem; flex-shrink: 0;
-  border-radius: .6rem; background: rgb(var(--ink-950) / .55); transition: background .2s ease;
+  border-radius: .6rem; background: #fff; color: rgb(var(--steel-700));
 }
-.sector-tab:hover .sector-expand { background: rgb(var(--accent)); }
 .sector-tab:focus-visible { outline: 3px solid rgb(var(--accent-light)); outline-offset: -3px; border-radius: .5rem; }
 .sector-panel { display: none; position: relative; background: rgb(var(--panel)); }
 .sector.is-active { background: rgb(var(--panel)); }
@@ -201,6 +200,10 @@ footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
 @media (min-width: 1024px) and (hover: hover) {
   .bento-list { max-height: 0; margin-top: 0; opacity: 0; transform: translateY(12px); overflow: hidden; transition: max-height .45s ease, margin-top .45s ease, opacity .35s ease, transform .45s ease; }
   .bento-card:hover .bento-list, .bento-card:focus-within .bento-list { max-height: 8rem; margin-top: 1rem; opacity: 1; transform: none; }
+  /* Dark ink overlay rises from the bottom edge on hover/focus */
+  .bento-shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(var(--ink-950) / .8) 0%, rgb(var(--ink-950) / .55) 50%, rgb(var(--ink-950) / .3) 100%);
+    transform: translateY(100%); transition: transform .5s cubic-bezier(.65,0,.35,1); }
+  .bento-card:hover .bento-shade::after, .bento-card:focus-within .bento-shade::after { transform: none; }
 }
 
 /* Statement words: dim until the scroll animation fills them in */
@@ -427,9 +430,9 @@ html.lenis, html.lenis body { height: auto; }
 .gsap-on .tl-item:not(.is-on) .tl-dot:has(> .cf-icon) { background: rgb(var(--tone, var(--accent))); border-color: rgb(var(--tone, var(--accent))); color: #fff; opacity: .55; }
 :is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon :is(.a, .af) { stroke: currentColor; }
 :is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon .af { fill: currentColor; stroke: none; }
-/* Where the icon sits on the accent or turns accent on hover, the accent takes the icon colour so it stays visible */
-:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .a { stroke: currentColor; }
-:is(.bg-accent, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .af { fill: currentColor; }
+/* Where the icon sits on the accent or steel blue, or turns accent on hover, the accent takes the icon colour so it stays visible */
+:is(.bg-accent, .bg-steel-700, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .a { stroke: currentColor; }
+:is(.bg-accent, .bg-steel-700, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .af { fill: currentColor; }
 /* On navy, the lighter accent tint reads better */
 :is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .a { stroke: rgb(var(--accent-light)); }
 :is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .af { fill: rgb(var(--accent-light)); }
