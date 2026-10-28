@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clovity Federal | Atlassian for Secure Government Environments</title>
+  <meta name="description" content="Clovity Federal, the public sector practice of Atlassian Platinum Solution Partner Clovity, configures, migrates and documents Jira, Confluence and Jira Service Management for government, including FedRAMP Moderate Atlassian Government Cloud.">
+  <link rel="icon" href="assets/img/clovity-fed-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="bg-white font-sans text-ink-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+  <!-- Header (generated: shared across pages) -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+    <div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 sm:px-6">
+      <a href="index.html" class="flex items-center" aria-label="Clovity Federal home">
+        <img src="assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" class="logo-light h-11 w-auto">
+        <img src="assets/img/clovity-fed-logo.png" alt="Clovity Federal" class="logo-dark hidden h-11 w-auto">
+      </a>
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <div class="has-menu relative">
+          <button type="button" class="nav-link " aria-haspopup="true">Expertise <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-[460px]">
+            <div class="dropdown ">
+              <a href="atlassian-solutions.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="layers" class="h-5 w-5"></i></span><span><span class="block font-semibold">Atlassian Solutions</span><span class="block text-sm text-black">Jira, Confluence, JSM and the wider platform</span></span></a>
+              <a href="ai-solutions.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="sparkles" class="h-5 w-5"></i></span><span><span class="block font-semibold">AI Solutions</span><span class="block text-sm text-black">Practical, governed AI inside Atlassian</span></span></a>
+              <a href="government-cloud.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="landmark" class="h-5 w-5"></i></span><span><span class="block font-semibold">Atlassian Government Cloud</span><span class="block text-sm text-black">Plan, stand up and adopt AGC</span></span></a>
+              <a href="itsm.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="headset" class="h-5 w-5"></i></span><span><span class="block font-semibold">ITSM &amp; Service Management</span><span class="block text-sm text-black">Service desks built on JSM</span></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="has-menu relative">
+          <button type="button" class="nav-link " aria-haspopup="true">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-[665px]">
+            <div class="dropdown grid grid-cols-2">
+              <a href="services.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="layout-grid" class="h-5 w-5"></i></span><span><span class="block font-semibold">Services Overview</span><span class="block text-sm text-black">All our services at a glance</span></span></a>
+              <a href="services.html#migrations" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="cloud-upload" class="h-5 w-5"></i></span><span><span class="block font-semibold">Migrations</span><span class="block text-sm text-black">Server and Data Center to cloud</span></span></a>
+              <a href="services.html#licensing" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="file-badge" class="h-5 w-5"></i></span><span><span class="block font-semibold">Licensing &amp; Consulting</span><span class="block text-sm text-black">Right-sized licensing and advice</span></span></a>
+              <a href="services.html#managed" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="life-buoy" class="h-5 w-5"></i></span><span><span class="block font-semibold">Managed Services</span><span class="block text-sm text-black">Ongoing administration and support</span></span></a>
+              <a href="services.html#professional" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="wrench" class="h-5 w-5"></i></span><span><span class="block font-semibold">Professional Services</span><span class="block text-sm text-black">Implementation and integrations</span></span></a>
+              <a href="services.html#training" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="graduation-cap" class="h-5 w-5"></i></span><span><span class="block font-semibold">Training &amp; Enablement</span><span class="block text-sm text-black">Role-based training for every user</span></span></a>
+            </div>
+          </div>
+        </div>
+        <a href="compliance.html" class="nav-link ">Compliance</a>
+        <div class="has-menu relative">
+          <button type="button" class="nav-link " aria-haspopup="true">Resources <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-80">
+            <div class="dropdown ">
+              <a href="blog.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="newspaper" class="h-5 w-5"></i></span><span><span class="block font-semibold">Blog</span><span class="block text-sm text-black">Guides, checklists and articles</span></span></a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link ">About Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden rounded-full bg-btn px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-btn-dark sm:inline-flex">Contact Us</a>
+        <button id="menu-btn" class="menu-btn rounded-lg p-2 text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" data-lenis-prevent class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto bg-white lg:hidden">
+      <nav class="mx-auto flex max-w-site flex-col px-4 py-4 sm:px-6" aria-label="Mobile">
+        <details class="m-group">
+          <summary>Expertise <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="atlassian-solutions.html" class="block py-2 text-black">Atlassian Solutions</a><a href="ai-solutions.html" class="block py-2 text-black">AI Solutions</a><a href="government-cloud.html" class="block py-2 text-black">Atlassian Government Cloud</a><a href="itsm.html" class="block py-2 text-black">ITSM &amp; Service Management</a></div>
+        </details>
+        <details class="m-group">
+          <summary>Services <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="services.html" class="block py-2 text-black">Services Overview</a><a href="services.html#migrations" class="block py-2 text-black">Migrations</a><a href="services.html#licensing" class="block py-2 text-black">Licensing &amp; Consulting</a><a href="services.html#managed" class="block py-2 text-black">Managed Services</a><a href="services.html#professional" class="block py-2 text-black">Professional Services</a><a href="services.html#training" class="block py-2 text-black">Training &amp; Enablement</a></div>
+        </details>
+        <a href="compliance.html" class="m-link">Compliance</a>
+        <details class="m-group">
+          <summary>Resources <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="blog.html" class="block py-2 text-black">Blog</a></div>
+        </details>
+        <a href="about.html" class="m-link">About Us</a>
+        <a href="contact.html" class="mt-4 rounded-full bg-btn px-5 py-3 text-center font-semibold text-white">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO with background video -->
+    <section class="relative isolate flex h-screen sm:min-h-[600px] items-center overflow-hidden bg-ink-950">
+      <!-- Background video: Clovity-supplied banner video -->
+      <video id="hero-video" class="hero-video absolute inset-0 -z-20 h-full w-full object-cover" autoplay muted loop playsinline preload="auto" poster="assets/img/hero-home-banner-img.png">
+        <source src="assets/videos/clovity-federal-home.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay absolute inset-0 -z-10"></div>
+
+      <div class="mx-auto w-full max-w-site px-4 py-20 sm:px-6">
+        <div class="max-w-3xl text-center sm:text-left">
+          <h1 class="font-display text-3xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Atlassian built for secure <span class="text-[#93c5fd]">government environments.</span>
+          </h1>
+          <!-- Phones get a one-line version; the full sentence shows from sm up -->
+          <p class="mt-4 text-base leading-relaxed text-white sm:hidden">Clovity Federal configures, migrates and documents Jira, Confluence and JSM inside public sector security rules, so your security team can approve it.</p>
+          <p class="mt-6 hidden max-w-2xl text-lg leading-relaxed text-white sm:block sm:text-xl">
+            Clovity Federal configures, migrates and documents Jira, Confluence and Jira Service Management inside public sector security rules, so your security team can approve it and your mission teams can use it.
+          </p>
+        </div>
+
+      </div>
+
+      <button id="video-toggle" class="absolute bottom-8 right-6 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20" aria-label="Pause background video">
+        <i data-lucide="pause" data-icon="pause" class="h-4 w-4"></i>
+        <i data-lucide="play" data-icon="play" class="hidden h-4 w-4"></i>
+      </button>
+    </section>
+
+    <!-- Product strip -->
+    <section class="border-b border-black/5 bg-white py-16 lg:py-20" aria-label="Atlassian platform">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+          <span class="flex items-center gap-1.5 text-xl font-semibold text-ink-800"><img src="assets/img/icons/jira-icon.svg" alt="" class="h-9 w-9">Jira</span>
+          <span class="flex items-center gap-1.5 text-xl font-semibold text-ink-800"><img src="assets/img/icons/confluence-icon.svg" alt="" class="h-9 w-9">Confluence</span>
+          <span class="flex items-center gap-1.5 text-xl font-semibold text-ink-800"><img src="assets/img/icons/jsm-icon.svg" alt="" class="h-9 w-9">Jira Service Management</span>
+          <span class="flex items-center gap-1.5 text-xl font-semibold text-ink-800"><img src="assets/img/icons/bitbucket-icon.svg" alt="" class="h-9 w-9">Bitbucket</span>
+          <span class="flex items-center gap-1.5 text-xl font-semibold text-ink-800"><img src="assets/img/icons/government-cloud-icon.svg" alt="" class="h-9 w-9">Atlassian Government Cloud</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement: words fill in as you scroll -->
+    <section data-statement class="bg-white py-16 lg:py-20">
+      <div class="mx-auto grid w-full max-w-site items-center gap-12 px-4 sm:px-6 lg:grid-cols-12">
+        <p data-fill class="lg:col-span-7 font-display text-3xl font-medium leading-[1.2] tracking-tight text-ink-900 sm:text-4xl">Disconnected tools and late security slow the mission. We connect <span data-key>Jira, Confluence and your service desk,</span> with <span data-key>security built in from the first setting.</span></p>
+        <div class="hidden lg:col-span-5 lg:block">
+          <!-- Vector: siloed Jira, Confluence and service desk joined to a central security shield -->
+          <svg class="sv h-auto w-full" viewBox="0 0 420 420" role="img" aria-labelledby="sv-index-title">
+            <title id="sv-index-title">Jira, Confluence and the service desk connected to a central security shield</title>
+            <circle class="sv-bg" cx="210" cy="210" r="200"/>
+            <circle class="sv-orbit sv-spin" cx="210" cy="210" r="150"/>
+            <path class="sv-line" d="M100 95 L210 210 M320 95 L210 210 M210 360 L210 210"/>
+            <path class="sv-flow" d="M100 95 L210 210"/>
+            <path class="sv-flow sv-teal" style="animation-delay:-.5s" d="M320 95 L210 210"/>
+            <path class="sv-flow sv-violet" style="animation-delay:-1s" d="M210 360 L210 210"/>
+            <circle class="sv-pulse" cx="210" cy="210" r="60"/>
+            <g class="sv-card-g"><circle class="sv-card" cx="210" cy="210" r="58"/></g>
+            <path class="sv-ink" d="M210 168 L244 181 V211 C244 236 229 252 210 260 C191 252 176 236 176 211 V181 Z"/>
+            <rect x="197" y="207" width="26" height="21" rx="4" fill="#fff"/>
+            <path d="M202 207 v-6 a8 8 0 0 1 16 0 v6" fill="none" stroke="#fff" stroke-width="4"/>
+            <circle class="sv-ink" cx="210" cy="216" r="3"/>
+            <g class="sv-blue" transform="translate(100 95)"><g class="sv-float"><g class="sv-card-g">
+              <rect class="sv-card" x="-75" y="-26" width="150" height="52" rx="14"/>
+              <rect class="sv-chip" x="-63" y="-16" width="32" height="32" rx="9"/>
+              <g class="sv-ink-s" transform="translate(-47 0)"><rect x="-9" y="-9" width="18" height="18" rx="3"/><path d="M-3 -9 V9 M3 -9 V9"/></g>
+              <text class="sv-label" x="-21" y="5">Jira</text>
+            </g></g></g>
+            <g class="sv-teal" transform="translate(320 95)"><g class="sv-float" style="animation-delay:-1.6s"><g class="sv-card-g">
+              <rect class="sv-card" x="-75" y="-26" width="150" height="52" rx="14"/>
+              <rect class="sv-chip" x="-63" y="-16" width="32" height="32" rx="9"/>
+              <g class="sv-ink-s" transform="translate(-47 0)"><rect x="-7" y="-10" width="14" height="20" rx="2"/><path d="M-3 -4 H3 M-3 1 H3 M-3 6 H1"/></g>
+              <text class="sv-label" x="-21" y="5">Confluence</text>
+            </g></g></g>
+            <g class="sv-violet" transform="translate(210 360)"><g class="sv-float" style="animation-delay:-3.2s"><g class="sv-card-g">
+              <rect class="sv-card" x="-75" y="-26" width="150" height="52" rx="14"/>
+              <rect class="sv-chip" x="-63" y="-16" width="32" height="32" rx="9"/>
+              <g class="sv-ink-s" transform="translate(-47 0)"><path d="M-9 -7 H9 V4 H-1 L-6 9 V4 H-9 Z"/></g>
+              <text class="sv-label" x="-21" y="5">Service desk</text>
+            </g></g></g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we support federal mission outcomes -->
+    <section id="about" class="relative overflow-hidden bg-sand py-16 lg:py-20">
+      <div class="dot-grid absolute inset-y-0 right-0 w-1/2 opacity-60"></div>
+      <div class="relative mx-auto grid max-w-site items-center gap-16 px-4 sm:px-6 lg:grid-cols-2">
+        <div class="relative">
+          <img src="assets/img/home/modern-tech-office.jpg" alt="A modern open office with rows of staff working at laptops" loading="lazy" class="aspect-[4/5] w-full rounded-lg object-cover shadow-lift sm:aspect-[5/5]">
+          <div class="absolute -bottom-8 right-3 max-w-[280px] rounded-lg bg-white p-5 shadow-lift sm:-right-8 sm:p-6">
+            <div class="mb-4 h-1 w-12 rounded-full bg-accent"></div>
+            <p class="font-display text-lg font-semibold leading-snug text-ink-900">One accountable partner, from license to audit-ready records.</p>
+            <p class="mt-2 text-sm text-black">No gaps between a reseller, an integrator and a help desk for an auditor to find.</p>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-black font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl">How we support federal mission outcomes</h2>
+          <p class="mt-6 text-lg leading-relaxed text-black">
+            Clovity Federal is the public sector practice of Clovity, Inc., an Atlassian Platinum Solution Partner. We bring that platform depth to agencies and the integrators who support them, and shape each engagement around your security review.
+          </p>
+          <ul class="mt-8 space-y-4">
+            <li class="flex gap-4">
+              <i data-lucide="shield-check" class="h-5 w-5 shrink-0"></i>
+              <span><strong class="font-semibold">Secure environment expertise.</strong> <span class="text-black">Hardened configurations, least-privilege roles, single sign-on and audit logging, plus DevSecOps pipelines for sensitive systems.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <i data-lucide="clipboard-check" class="h-5 w-5 shrink-0"></i>
+              <span><strong class="font-semibold">Federal compliance experience.</strong> <span class="text-black">We know FedRAMP, NIST SP 800-53 and agency security requirements, and we document settings by control family for your ISSO.</span></span>
+            </li>
+            <li class="flex gap-4">
+              <i data-lucide="workflow" class="h-5 w-5 shrink-0"></i>
+              <span><strong class="font-semibold">Strategy through execution.</strong> <span class="text-black">Assessment, build, tuning and license renewal with one team, so nothing is lost between handoffs.</span></span>
+            </li>
+          </ul>
+          <a href="about.html" class="card-link mt-10 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">See how we work <i data-lucide="arrow-right" class="arrow h-5 w-5"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission outcomes grid -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+          <div class="max-w-4xl">
+            <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Mission outcomes, secured on Atlassian</h2>
+            <p class="mt-5 text-lg text-black">Mission readiness depends on tools that work together and hold up to review. Here is what a secured Atlassian platform makes possible.</p>
+          </div>
+          <a href="services.html" class="inline-flex shrink-0 self-start items-center lg:self-auto gap-2 rounded-full border border-ink-900/15 px-6 py-3 font-semibold hover:bg-ink-900 hover:text-white">All services <i data-lucide="arrow-up-right" class="h-4 w-4"></i></a>
+        </div>
+
+        <div data-tilt class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="government-cloud.html" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/secure-collab.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Secure collaboration</h3>
+            <p class="mt-3 leading-relaxed text-black">Jira, Confluence and JSM on Atlassian Government Cloud, set up inside its FedRAMP Moderate boundary with hardened permissions.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+          <a href="atlassian-solutions.html" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/mission-delivery.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Mission delivery</h3>
+            <p class="mt-3 leading-relaxed text-black">Jira and Bitbucket linked for DevSecOps, so requirements, code reviews and releases are traced from start to finish.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+          <a href="itsm.html" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/operational-coordination.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Operational coordination</h3>
+            <p class="mt-3 leading-relaxed text-black">Jira Service Management desks with an approval trail for every change, incident and access request.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+          <a href="services.html#professional" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/system-integration.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">System integration</h3>
+            <p class="mt-3 leading-relaxed text-black">Atlassian connected to your identity provider and mission tools, with each data flow reviewed before it goes live.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+          <a href="atlassian-solutions.html" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/leadership-visibility.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Leadership visibility</h3>
+            <p class="mt-3 leading-relaxed text-black">Program and portfolio dashboards built on live Jira data, so leaders see status and risk without chasing spreadsheets.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+          <a href="ai-solutions.html" class="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
+            <img src="assets/img/icons/governed-ai.png" alt="" class="w-14">
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Governed AI</h3>
+            <p class="mt-3 leading-relaxed text-black">AI features vary by deployment. We help you set data boundaries, usage rules and review steps before anything is switched on.</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">Learn more <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Government Cloud -->
+    <section id="government-cloud" class="relative overflow-hidden bg-sand py-16 lg:py-20">
+      <div class="dot-grid absolute inset-0 opacity-60"></div>
+      <div class="relative mx-auto grid max-w-site gap-16 px-4 sm:px-6 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <h2 class="text-black font-display text-3xl font-medium leading-tight tracking-tight sm:text-5xl">FedRAMP Moderate Government Cloud, with the scope spelled out</h2>
+          <p class="mt-6 text-lg leading-relaxed text-black">
+            Atlassian Government Cloud (AGC) received FedRAMP Moderate authorization in March 2025 and is listed on the FedRAMP Marketplace. It covers Jira, Confluence and Jira Service Management. The authorization does not extend to Atlassian's commercial cloud or to Marketplace apps, so each app is checked on its own.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-black">Need a higher impact level? We'll tell you plainly where AGC stands for yours.</p>
+          <!-- Verified Oct 2026: FedRAMP Moderate (Mar 2025) for Jira, Confluence, JSM. High and IL5 were future goals, not granted. Recheck the FedRAMP Marketplace listing before launch. -->
+          <a href="government-cloud.html" class="mt-10 inline-flex items-center gap-2 rounded-full bg-btn px-7 py-4 font-semibold text-white transition hover:bg-btn-dark">Plan your AGC move <i data-lucide="arrow-right" class="h-5 w-5"></i></a>
+        </div>
+
+        <div class="lg:col-span-7">
+          <!-- Mixkit free-license clip 23219: data center hallway -->
+          <div class="relative mb-6 overflow-hidden rounded-lg shadow-lift">
+            <video class="aspect-[16/8] w-full object-cover" autoplay muted loop playsinline poster="assets/img/home/data-server-video-poster.jpg">
+              <source src="assets/videos/data-servers.mp4" type="video/mp4">
+            </video>
+            <span class="absolute bottom-4 left-4 hidden rounded-full bg-white/90 sm:inline-block px-4 py-2 text-sm font-semibold text-ink-900">Run separately from Atlassian's commercial cloud</span>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+          <div class="rounded-lg bg-white p-7 shadow-card">
+            <h3 class="text-black font-display text-lg font-medium">Secure cloud collaboration</h3>
+            <p class="mt-2 text-black">Jira and Confluence spaces set up with permission schemes and audit settings your security team can review.</p>
+          </div>
+          <div class="rounded-lg bg-white p-7 shadow-card sm:mt-8">
+            <h3 class="text-black font-display text-lg font-medium">Government IT service delivery</h3>
+            <p class="mt-2 text-black">Jira Service Management portals, queues and approvals configured inside the authorized boundary.</p>
+          </div>
+          <div class="rounded-lg bg-white p-7 shadow-card">
+            <h3 class="text-black font-display text-lg font-medium">Governance and administration</h3>
+            <p class="mt-2 text-black">Admin roles, SSO through your agency identity provider and configuration records for each setting.</p>
+          </div>
+          <div class="rounded-lg bg-white p-7 shadow-card sm:mt-8">
+            <h3 class="text-black font-display text-lg font-medium">App vetting</h3>
+            <p class="mt-2 text-black">Every Marketplace app reviewed for Government Cloud availability, data access and your policies.</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact areas: tabs -->
+    <section class="bg-white py-16 lg:py-20" data-tabs>
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mx-auto max-w-2xl text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Where we deliver measurable impact</h2>
+          <p class="mt-5 text-lg text-black">Five areas where a secured Atlassian platform changes how government teams work.</p>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <div class="flex flex-wrap justify-center gap-2 lg:inline-flex lg:gap-1 lg:rounded-full lg:bg-sand lg:p-1.5" role="tablist">
+            <button class="tab-btn rounded-full bg-sand px-5 py-2.5 text-sm font-semibold transition lg:bg-transparent" role="tab" aria-selected="true" data-tab="itsm">IT Service Management</button>
+            <button class="tab-btn rounded-full bg-sand px-5 py-2.5 text-sm font-semibold transition lg:bg-transparent" role="tab" aria-selected="false" data-tab="cloud">Cloud Upgrades</button>
+            <button class="tab-btn rounded-full bg-sand px-5 py-2.5 text-sm font-semibold transition lg:bg-transparent" role="tab" aria-selected="false" data-tab="devsecops">DevSecOps</button>
+            <button class="tab-btn rounded-full bg-sand px-5 py-2.5 text-sm font-semibold transition lg:bg-transparent" role="tab" aria-selected="false" data-tab="agility">Organizational Agility</button>
+            <button class="tab-btn rounded-full bg-sand px-5 py-2.5 text-sm font-semibold transition lg:bg-transparent" role="tab" aria-selected="false" data-tab="admin">Platform Administration</button>
+          </div>
+        </div>
+
+        <div class="mt-14">
+          <div data-panel="itsm" class="grid items-center gap-12 lg:grid-cols-2">
+            <img src="assets/img/home/team-itsm.jpg" alt="IT professionals with laptops in a server room" class="aspect-[4/3] w-full rounded-lg object-cover shadow-lift">
+            <div>
+              <h3 class="text-black font-display text-2xl font-medium sm:text-3xl">Retire the legacy help desk, keep the audit trail</h3>
+              <p class="mt-4 text-lg text-black">Replace aging ticketing tools and email approvals with Jira Service Management workflows that record who asked, who approved and when.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Legacy tool replacement</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Change and access approvals</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Workflow and process design</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Audit-ready SLA reports</li>
+              </ul>
+              <a href="itsm.html" class="card-link mt-8 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">ITSM on Jira Service Management <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+            </div>
+          </div>
+          <div data-panel="cloud" class="hidden grid items-center gap-12 lg:grid-cols-2">
+            <img src="assets/img/home/cloud-upgrades.jpg" alt="Server racks with network cabling" class="aspect-[4/3] w-full rounded-lg object-cover shadow-lift">
+            <div>
+              <h3 class="text-black font-display text-2xl font-medium sm:text-3xl">Leave Data Center before March 2029, controls intact</h3>
+              <p class="mt-4 text-lg text-black">Atlassian Data Center reaches end of life in March 2029. We move legacy Server and Data Center instances to the right cloud on a tested, documented plan with data governance in place.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Target platform fit check</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Data cleanup and governance</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Test migrations and UAT</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Cutover with rollback plan</li>
+              </ul>
+              <a href="services.html#migrations" class="card-link mt-8 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">Migration services <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+            </div>
+          </div>
+          <div data-panel="devsecops" class="hidden grid items-center gap-12 lg:grid-cols-2">
+            <img src="assets/img/home/devsecops-home.jpg" alt="Analytics dashboard on a laptop screen" class="aspect-[4/3] w-full rounded-lg object-cover shadow-lift">
+            <div>
+              <h3 class="text-black font-display text-2xl font-medium sm:text-3xl">From requirement to release, nothing unaccounted for</h3>
+              <p class="mt-4 text-lg text-black">Link requirements, code changes, reviews and releases in Jira and Bitbucket, with hardened pipelines so every change to a mission system has a traceable history.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Requirements traceability</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Branch and merge controls</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Code review history</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Release records</li>
+              </ul>
+              <a href="atlassian-solutions.html" class="card-link mt-8 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">Atlassian solutions <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+            </div>
+          </div>
+          <div data-panel="agility" class="hidden grid items-center gap-12 lg:grid-cols-2">
+            <img src="assets/img/home/organization-agility.jpg" alt="Colleagues planning work in a meeting" class="aspect-[4/3] w-full rounded-lg object-cover shadow-lift">
+            <div>
+              <h3 class="text-black font-display text-2xl font-medium sm:text-3xl">Scale delivery across distributed teams</h3>
+              <p class="mt-4 text-lg text-black">Shared Jira and Confluence practices that let program offices, contractors and field teams plan and report the same way, with access set by role.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Standard project templates</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Cross-team planning</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Role-based access</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Role-based training</li>
+              </ul>
+              <a href="services.html#training" class="card-link mt-8 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">Training and enablement <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+            </div>
+          </div>
+          <div data-panel="admin" class="hidden grid items-center gap-12 lg:grid-cols-2">
+            <img src="assets/img/home/platform-admin.jpg" alt="Team collaborating at laptops" class="aspect-[4/3] w-full rounded-lg object-cover shadow-lift">
+            <div>
+              <h3 class="text-black font-display text-2xl font-medium sm:text-3xl">Day-to-day administration that stays inside the baseline</h3>
+              <p class="mt-4 text-lg text-black">Experienced Atlassian administrators who run the platform for you and give strategic guidance, keeping every change inside your approved configuration.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2">
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Periodic access reviews</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Audit log checks for ConMon</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Release and change tracking</li>
+                <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="h-5 w-5 text-teal-600"></i>Platform roadmap advice</li>
+              </ul>
+              <a href="services.html#managed" class="card-link mt-8 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">Managed services <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we execute: bento grid of photo cards; deliverables slide up on hover/focus (CSS only) -->
+    <section class="relative overflow-hidden bg-sand py-16 lg:py-20">
+      <div class="mx-auto w-full max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">How we execute, step by step</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg text-black">Every engagement follows the same path. Each step ends with security artifacts your contracting officer and ISSO can review.</p>
+        </div>
+
+        <div class="bento mt-12 lg:mt-14">
+          <article class="bento-card lg:col-span-7" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" alt="Two people reviewing handwritten notes beside laptops">
+            <div class="bento-shade" aria-hidden="true"></div>
+            <div class="bento-content">
+              <div class="mt-auto">
+                <h3 class="font-display text-2xl font-medium sm:text-3xl">Assess</h3>
+                <p class="mt-2 max-w-lg text-white/80">Find the gaps, friction points, compliance needs and dependencies across your instances, apps and integrations.</p>
+                <ul class="bento-list">
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Data categorization review</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Permission and access audit</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>App and integration risk inventory</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bento-card lg:col-span-5" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1100&q=80" alt="A hand tracing a system diagram on a planning board">
+            <div class="bento-shade" aria-hidden="true"></div>
+            <div class="bento-content">
+              <div class="mt-auto">
+                <h3 class="font-display text-2xl font-medium sm:text-3xl">Architect</h3>
+                <p class="mt-2 max-w-lg text-white/80">Design a secure Atlassian setup that fits your mission workflows, with controls built in from the start.</p>
+                <ul class="bento-list">
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Control mapping to NIST SP 800-53</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Identity and permission model</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Risk register for your ISSO</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bento-card lg:col-span-5" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1100&q=80" alt="Engineers working at their desks with laptops and monitors">
+            <div class="bento-shade" aria-hidden="true"></div>
+            <div class="bento-content">
+              <div class="mt-auto">
+                <h3 class="font-display text-2xl font-medium sm:text-3xl">Operationalize</h3>
+                <p class="mt-2 max-w-lg text-white/80">Deploy the platform, pipelines and controls, then move your data on a scheduled cutover.</p>
+                <ul class="bento-list">
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Hardened configuration</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Configuration records and change log</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Cutover with rollback plan</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+          <article class="bento-card lg:col-span-7" tabindex="0">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80" alt="A laptop showing an analytics dashboard">
+            <div class="bento-shade" aria-hidden="true"></div>
+            <div class="bento-content">
+              <div class="mt-auto">
+                <h3 class="font-display text-2xl font-medium sm:text-3xl">Evolve</h3>
+                <p class="mt-2 max-w-lg text-white/80">Ongoing support that improves performance and resilience while keeping the platform inside its approved baseline.</p>
+                <ul class="bento-list">
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Periodic access reviews</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Audit log checks for ConMon</li>
+                  <li><i data-lucide="check" class="h-4 w-4"></i>Release and change tracking</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors: expanding accordion (click a tab to open it) -->
+    <section id="missions" class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="mx-auto max-w-2xl text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Atlassian solutions by government sector</h2>
+          <p class="mt-5 text-lg text-black">Different missions, different rules. The same need: work that is controlled, documented and ready for audit.</p>
+        </div>
+
+        <div class="sectors mt-14" data-sectors>
+          <article class="sector is-active">
+            <button type="button" class="sector-tab" aria-expanded="true" aria-controls="sector-civilian">
+              <span class="sector-label"><i data-lucide="building-2" class="h-5 w-5"></i><span>Federal Civilian</span></span>
+              <span class="sector-expand" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </button>
+            <div id="sector-civilian" class="sector-panel" role="region" aria-label="Federal Civilian">
+              <div class="relative grid h-full gap-8 p-4 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:p-8">
+                <div class="flex flex-col">
+                  <span class="inline-flex w-max items-center gap-2.5 rounded-lg bg-steel-700 px-4 py-2.5 font-semibold text-white"><i data-lucide="building-2" class="h-5 w-5"></i>Federal Civilian</span>
+                  <div class="mt-6 lg:my-auto">
+                    <h3 class="font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Move to FedRAMP Moderate cloud with your controls intact</h3>
+                    <ul class="mt-6 space-y-3">
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Products.</strong> <span class="text-black">Jira, Confluence and JSM on Atlassian Government Cloud, or Data Center until its March 2029 end of life.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Compliance.</strong> <span class="text-black">FedRAMP Moderate through AGC, settings documented for FISMA and NIST SP 800-53, records planned around NARA schedules.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Procurement.</strong> <span class="text-black">We work with your contracting office and share UEI, CAGE and contract-vehicle details on request.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Use cases.</strong> <span class="text-black">IT modernization, Agile program management, ITSM and DevSecOps.</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1617581629397-a72507c3de9e?auto=format&fit=crop&w=900&q=80" alt="Washington Monument behind cherry blossoms" class="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full">
+              </div>
+            </div>
+          </article>
+          <article class="sector">
+            <button type="button" class="sector-tab" aria-expanded="false" aria-controls="sector-defense">
+              <span class="sector-label"><i data-lucide="shield" class="h-5 w-5"></i><span>Defense</span></span>
+              <span class="sector-expand" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </button>
+            <div id="sector-defense" class="sector-panel" role="region" aria-label="Defense">
+              <div class="relative grid h-full gap-8 p-4 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:p-8">
+                <div class="flex flex-col">
+                  <span class="inline-flex w-max items-center gap-2.5 rounded-lg bg-steel-700 px-4 py-2.5 font-semibold text-white"><i data-lucide="shield" class="h-5 w-5"></i>Defense</span>
+                  <div class="mt-6 lg:my-auto">
+                    <h3 class="font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Traceable, controlled delivery for defense programs</h3>
+                    <ul class="mt-6 space-y-3">
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Products.</strong> <span class="text-black">Jira, Confluence, Bitbucket and JSM, on the hosting option that fits your data.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Compliance.</strong> <span class="text-black">Settings mapped to NIST SP 800-53, and a plain answer on where AGC stands for your impact level.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Procurement.</strong> <span class="text-black">We work with your contracting office and share UEI, CAGE and contract-vehicle details on request.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Use cases.</strong> <span class="text-black">Requirement-to-release traceability, DevSecOps pipelines and program reporting.</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Server racks with network cabling" class="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full">
+              </div>
+            </div>
+          </article>
+          <article class="sector">
+            <button type="button" class="sector-tab" aria-expanded="false" aria-controls="sector-sled">
+              <span class="sector-label"><i data-lucide="map-pin" class="h-5 w-5"></i><span>State &amp; Local</span></span>
+              <span class="sector-expand" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </button>
+            <div id="sector-sled" class="sector-panel" role="region" aria-label="State &amp; Local">
+              <div class="relative grid h-full gap-8 p-4 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:p-8">
+                <div class="flex flex-col">
+                  <span class="inline-flex w-max items-center gap-2.5 rounded-lg bg-steel-700 px-4 py-2.5 font-semibold text-white"><i data-lucide="map-pin" class="h-5 w-5"></i>State &amp; Local</span>
+                  <div class="mt-6 lg:my-auto">
+                    <h3 class="font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Shared service desks with clear data boundaries</h3>
+                    <ul class="mt-6 space-y-3">
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Products.</strong> <span class="text-black">Jira, Confluence, JSM and Bitbucket, on cloud or Data Center.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Compliance.</strong> <span class="text-black">CJIS, GovRAMP (formerly StateRAMP) and state privacy rules, planned around from the start.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Procurement.</strong> <span class="text-black">Licensing quoted to your state's purchasing rules.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Use cases.</strong> <span class="text-black">Citizen services, cross-department help desks, public works projects and records.</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?auto=format&fit=crop&w=900&q=80" alt="Curved shelves inside a public library" class="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full">
+              </div>
+            </div>
+          </article>
+          <article class="sector">
+            <button type="button" class="sector-tab" aria-expanded="false" aria-controls="sector-primes">
+              <span class="sector-label"><i data-lucide="handshake" class="h-5 w-5"></i><span>Prime Contractors</span></span>
+              <span class="sector-expand" aria-hidden="true"><i data-lucide="maximize-2" class="h-4 w-4"></i></span>
+            </button>
+            <div id="sector-primes" class="sector-panel" role="region" aria-label="Prime Contractors">
+              <div class="relative grid h-full gap-8 p-4 sm:p-6 lg:grid-cols-[1.1fr_1fr] lg:p-8">
+                <div class="flex flex-col">
+                  <span class="inline-flex w-max items-center gap-2.5 rounded-lg bg-steel-700 px-4 py-2.5 font-semibold text-white"><i data-lucide="handshake" class="h-5 w-5"></i>Prime Contractors</span>
+                  <div class="mt-6 lg:my-auto">
+                    <h3 class="font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">An Atlassian technology partner inside your program</h3>
+                    <ul class="mt-6 space-y-3">
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Products.</strong> <span class="text-black">Jira and Confluence for Agile and DevSecOps teams, plus JSM and Bitbucket.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Compliance.</strong> <span class="text-black">Configurations that support your NIST SP 800-171 and CMMC work for CUI.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Procurement.</strong> <span class="text-black">Teaming on Atlassian scope, with UEI and CAGE details on request.</span></span></li>
+                      <li class="flex gap-3"><i data-lucide="check" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><strong class="font-semibold">Use cases.</strong> <span class="text-black">Faster platform deployment, migrations and service desks inside larger programs.</span></span></li>
+                    </ul>
+                  </div>
+                </div>
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80" alt="A team working together at computers" class="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full">
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What our federal clients gain -->
+    <section data-gains class="bg-sand py-16 lg:py-20">
+      <div class="mx-auto grid max-w-site gap-12 px-4 sm:px-6 lg:grid-cols-[2fr_3fr] lg:gap-0">
+        <div class="lg:pr-12">
+          <div class="lg:sticky lg:top-32">
+            <h2 class="font-display text-3xl font-medium tracking-tight text-black sm:text-5xl">What our federal clients gain</h2>
+            <p class="mt-6 max-w-lg text-lg leading-relaxed text-black">Four results we design every engagement to deliver, whether the job is a migration, a new service desk or an agency-wide rollout.</p>
+            <a href="contact.html" class="mt-10 inline-flex items-center gap-2 border-b-2 border-accent pb-1 font-semibold text-ink-900 hover:text-accent">Talk to our team <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+          </div>
+        </div>
+        <ol class="border-l border-steel-100">
+          <li class="gain-step">
+            <p class="font-display text-lg font-semibold text-accent">Visibility</p>
+            <h3 class="mt-3 font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">See work, requests and risk in one place.</h3>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-black">One view across programs, built on live Jira and service desk data instead of status reports assembled by hand.</p>
+            <p class="mt-6 text-sm text-black"><span class="eyebrow mr-2 text-xs text-ink-900">In practice</span>Dashboards your program and IT leads read from the same source.</p>
+          </li>
+          <li class="gain-step">
+            <p class="font-display text-lg font-semibold text-accent">Control</p>
+            <h3 class="mt-3 font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Governance built into the configuration.</h3>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-black">Workflows, permissions and approvals set up to match how your agency already makes decisions, with each setting written down.</p>
+            <p class="mt-6 text-sm text-black"><span class="eyebrow mr-2 text-xs text-ink-900">In practice</span>A configuration record your team can review and keep current.</p>
+          </li>
+          <li class="gain-step">
+            <p class="font-display text-lg font-semibold text-accent">Security</p>
+            <h3 class="mt-3 font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Access your assessor can follow.</h3>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-black">Least-privilege access, SSO through your identity provider and audit logs that show who changed what, and when.</p>
+            <p class="mt-6 text-sm text-black"><span class="eyebrow mr-2 text-xs text-ink-900">In practice</span>Settings mapped to the controls your ATO package asks about.</p>
+          </li>
+          <li class="gain-step">
+            <p class="font-display text-lg font-semibold text-accent">Scalability</p>
+            <h3 class="mt-3 font-display text-2xl font-medium tracking-tight text-black sm:text-3xl">Grow from one team to the whole agency.</h3>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-black">A platform designed so new teams, projects and service desks can join without reopening security gaps.</p>
+            <p class="mt-6 text-sm text-black"><span class="eyebrow mr-2 text-xs text-ink-900">In practice</span>Templates and onboarding steps for each new team.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Compliance band -->
+    <section class="bg-white py-16 lg:py-20">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="grid items-center gap-12 lg:grid-cols-3">
+          <div>
+            <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Compliance with clear scope</h2>
+            <p class="mt-4 text-black">Atlassian holds the service authorization. Your agency owns its ATO. We design around these standards and document the platform so the two meet cleanly. Commercial cloud is not FedRAMP Moderate, and we never claim an authorization we don't hold.</p>
+            <a href="compliance.html" class="card-link mt-6 inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">Our compliance approach <i data-lucide="arrow-right" class="arrow h-4 w-4"></i></a>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="shield-check" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">FedRAMP Moderate</h3><p class="mt-1 text-sm text-black">Through Atlassian Government Cloud only, for Jira, Confluence and JSM.</p></div>
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="file-lock-2" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">FISMA &amp; NIST SP 800-53</h3><p class="mt-1 text-sm text-black">Settings mapped to access, audit, configuration and identity controls.</p></div>
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="key-round" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">Zero Trust &amp; ICAM</h3><p class="mt-1 text-sm text-black">Identity-first access through your agency IdP, with PIV/CAC-aware sign-in.</p></div>
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="lock" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">NIST SP 800-171 &amp; CMMC</h3><p class="mt-1 text-sm text-black">Configurations that support contractors protecting CUI.</p></div>
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="server" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">DISA impact levels</h3><p class="mt-1 text-sm text-black">We'll tell you plainly where AGC stands for your impact level.</p></div>
+            <div class="rounded-lg bg-white p-6 shadow-lift"><i data-lucide="accessibility" class="h-7 w-7 text-ink-900"></i><h3 class="text-black mt-4 font-medium">Section 508 &amp; NARA</h3><p class="mt-1 text-sm text-black">Accessible portals and records retention planned around NARA schedules.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="bg-sand py-16 lg:py-20">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div>
+            <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Federal resources for your next security review</h2>
+          </div>
+          <a href="blog.html" class="inline-flex items-center gap-2 font-semibold text-ink-900 hover:text-accent">All resources <i data-lucide="arrow-right" class="h-4 w-4"></i></a>
+        </div>
+        <div class="mt-14 grid gap-8 md:grid-cols-3">
+          <a href="blog.html" class="card-link group">
+            <div data-clip class="overflow-hidden rounded-lg"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Abstract digital security graphic" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105"></div>
+            <h3 class="text-black mt-5 font-display text-xl font-medium group-hover:text-accent">Is Atlassian Government Cloud right for your data?</h3>
+            <p class="mt-2 text-black">A short readiness checklist for program and security leads.</p>
+          </a>
+          <a href="blog.html" class="card-link group">
+            <div data-clip class="overflow-hidden rounded-lg"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Network switch with patch cables" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105"></div>
+            <h3 class="text-black mt-5 font-display text-xl font-medium group-hover:text-accent">From admin screen to control family: mapping Atlassian to NIST SP 800-53</h3>
+            <p class="mt-2 text-black">Which settings your assessor will ask about, and how to document them.</p>
+          </a>
+          <a href="blog.html" class="card-link group">
+            <div data-clip class="overflow-hidden rounded-lg"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Colleagues reviewing work at a desk" class="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-105"></div>
+            <h3 class="text-black mt-5 font-display text-xl font-medium group-hover:text-accent">Vetting Marketplace apps for Government Cloud</h3>
+            <p class="mt-2 text-black">Why AGC's authorization stops at the app, and what to check before you install one.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-4 py-16 lg:py-24 sm:px-6">
+      <!-- Fixed background image (parallax). No transform on this container, or the fixed attachment stops working. -->
+      <div class="relative mx-auto max-w-site overflow-hidden rounded-lg bg-ink-900 bg-cover bg-center lg:bg-fixed px-6 py-20 text-center text-white sm:px-16 sm:py-28"
+           style="background-image: url('assets/img/us-capitol-clouds.jpg');">
+        <div class="absolute inset-0 bg-ink-950/55"></div>
+        <div class="relative">
+          <h2 class="mx-auto max-w-3xl font-display text-3xl font-medium tracking-tight sm:text-5xl">Let's talk about your mission.</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg text-white/75">Talk to a federal Atlassian solutions expert about deployment, migration, security configuration or modernization. Bring your security lead. We'll review where you stand and lay out practical next steps.</p>
+          <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-btn px-7 py-4 font-semibold text-white hover:bg-btn-dark">Talk to an expert <i data-lucide="calendar" class="h-5 w-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (generated: shared across pages) -->
+  <footer class="overflow-hidden bg-ink-900 text-white/70">
+    <div class="mx-auto grid max-w-site gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-block"><img src="assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" class="h-12 w-auto"></a>
+        <p class="mt-6 max-w-sm leading-relaxed">Secure Atlassian configuration, migration and support for federal, state and local government, documented for your ATO.</p>
+        <div class="mt-6 inline-flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+          <img src="https://cdn.simpleicons.org/atlassian/ffffff" alt="" class="h-6 w-6">
+          <span class="text-sm"><span class="block font-semibold text-white">Platinum Solution Partner</span>Atlassian Partner Program</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-8">
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Expertise</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="atlassian-solutions.html" class="hover:text-white">Atlassian Solutions</a></li>
+            <li><a href="ai-solutions.html" class="hover:text-white">AI Solutions</a></li>
+            <li><a href="government-cloud.html" class="hover:text-white">Atlassian Government Cloud</a></li>
+            <li><a href="itsm.html" class="hover:text-white">ITSM &amp; Service Management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Services</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="services.html" class="hover:text-white">Services Overview</a></li>
+            <li><a href="services.html#migrations" class="hover:text-white">Migrations</a></li>
+            <li><a href="services.html#licensing" class="hover:text-white">Licensing &amp; Consulting</a></li>
+            <li><a href="services.html#managed" class="hover:text-white">Managed Services</a></li>
+            <li><a href="services.html#professional" class="hover:text-white">Professional Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Company</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="compliance.html" class="hover:text-white">Compliance</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-site flex-col gap-3 px-4 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p>&copy; <span id="year">2026</span> Clovity, Inc. All rights reserved.</p>
+        <div class="flex gap-5"><a href="#" class="hover:text-white">Privacy</a><a href="#" class="hover:text-white">Accessibility</a><a href="#" class="hover:text-white">Terms</a></div>
+      </div>
+    </div>
+    <!-- Decorative wordmark: letters rise in as the footer scrolls into view (animations.js) -->
+    <div class="footer-wordmark" aria-hidden="true"><span data-wordmark>Clovity Federal</span></div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

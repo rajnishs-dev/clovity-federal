@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlassian Government Cloud (FedRAMP Moderate) | Clovity Federal</title>
+  <meta name="description" content="Readiness checks, secure setup and Data Center migration for Atlassian Government Cloud, FedRAMP Moderate authorized for Jira, Confluence and Jira Service Management, with clear scope.">
+  <link rel="icon" href="assets/img/clovity-fed-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tw-config.js"></script>
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body class="bg-white font-sans text-ink-900">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+  <!-- Header (generated: shared across pages) -->
+  <header id="site-header" class="fixed inset-x-0 top-0 z-40 transition-all duration-300">
+    <div class="mx-auto flex h-20 max-w-site items-center justify-between px-4 sm:px-6">
+      <a href="index.html" class="flex items-center" aria-label="Clovity Federal home">
+        <img src="assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" class="logo-light h-11 w-auto">
+        <img src="assets/img/clovity-fed-logo.png" alt="Clovity Federal" class="logo-dark hidden h-11 w-auto">
+      </a>
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary">
+        <div class="has-menu relative">
+          <button type="button" class="nav-link is-active" aria-haspopup="true">Expertise <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-[460px]">
+            <div class="dropdown ">
+              <a href="atlassian-solutions.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="layers" class="h-5 w-5"></i></span><span><span class="block font-semibold">Atlassian Solutions</span><span class="block text-sm text-black">Jira, Confluence, JSM and the wider platform</span></span></a>
+              <a href="ai-solutions.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="sparkles" class="h-5 w-5"></i></span><span><span class="block font-semibold">AI Solutions</span><span class="block text-sm text-black">Practical, governed AI inside Atlassian</span></span></a>
+              <a href="government-cloud.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="landmark" class="h-5 w-5"></i></span><span><span class="block font-semibold">Atlassian Government Cloud</span><span class="block text-sm text-black">Plan, stand up and adopt AGC</span></span></a>
+              <a href="itsm.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="headset" class="h-5 w-5"></i></span><span><span class="block font-semibold">ITSM &amp; Service Management</span><span class="block text-sm text-black">Service desks built on JSM</span></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="has-menu relative">
+          <button type="button" class="nav-link " aria-haspopup="true">Services <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-[665px]">
+            <div class="dropdown grid grid-cols-2">
+              <a href="services.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="layout-grid" class="h-5 w-5"></i></span><span><span class="block font-semibold">Services Overview</span><span class="block text-sm text-black">All our services at a glance</span></span></a>
+              <a href="services.html#migrations" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="cloud-upload" class="h-5 w-5"></i></span><span><span class="block font-semibold">Migrations</span><span class="block text-sm text-black">Server and Data Center to cloud</span></span></a>
+              <a href="services.html#licensing" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="file-badge" class="h-5 w-5"></i></span><span><span class="block font-semibold">Licensing &amp; Consulting</span><span class="block text-sm text-black">Right-sized licensing and advice</span></span></a>
+              <a href="services.html#managed" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="life-buoy" class="h-5 w-5"></i></span><span><span class="block font-semibold">Managed Services</span><span class="block text-sm text-black">Ongoing administration and support</span></span></a>
+              <a href="services.html#professional" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="wrench" class="h-5 w-5"></i></span><span><span class="block font-semibold">Professional Services</span><span class="block text-sm text-black">Implementation and integrations</span></span></a>
+              <a href="services.html#training" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="graduation-cap" class="h-5 w-5"></i></span><span><span class="block font-semibold">Training &amp; Enablement</span><span class="block text-sm text-black">Role-based training for every user</span></span></a>
+            </div>
+          </div>
+        </div>
+        <a href="compliance.html" class="nav-link ">Compliance</a>
+        <div class="has-menu relative">
+          <button type="button" class="nav-link " aria-haspopup="true">Resources <i data-lucide="chevron-down" class="h-4 w-4"></i></button>
+          <div class="mega absolute top-full pt-4 w-80">
+            <div class="dropdown ">
+              <a href="blog.html" class="dd-item dd-rich"><span class="dd-icon"><i data-lucide="newspaper" class="h-5 w-5"></i></span><span><span class="block font-semibold">Blog</span><span class="block text-sm text-black">Guides, checklists and articles</span></span></a>
+            </div>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link ">About Us</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="hidden rounded-full bg-btn px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-btn-dark sm:inline-flex">Contact Us</a>
+        <button id="menu-btn" class="menu-btn rounded-lg p-2 text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <i data-lucide="menu" class="h-6 w-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" data-lenis-prevent class="hidden max-h-[calc(100vh-5rem)] overflow-y-auto bg-white lg:hidden">
+      <nav class="mx-auto flex max-w-site flex-col px-4 py-4 sm:px-6" aria-label="Mobile">
+        <details class="m-group">
+          <summary>Expertise <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="atlassian-solutions.html" class="block py-2 text-black">Atlassian Solutions</a><a href="ai-solutions.html" class="block py-2 text-black">AI Solutions</a><a href="government-cloud.html" class="block py-2 text-black">Atlassian Government Cloud</a><a href="itsm.html" class="block py-2 text-black">ITSM &amp; Service Management</a></div>
+        </details>
+        <details class="m-group">
+          <summary>Services <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="services.html" class="block py-2 text-black">Services Overview</a><a href="services.html#migrations" class="block py-2 text-black">Migrations</a><a href="services.html#licensing" class="block py-2 text-black">Licensing &amp; Consulting</a><a href="services.html#managed" class="block py-2 text-black">Managed Services</a><a href="services.html#professional" class="block py-2 text-black">Professional Services</a><a href="services.html#training" class="block py-2 text-black">Training &amp; Enablement</a></div>
+        </details>
+        <a href="compliance.html" class="m-link">Compliance</a>
+        <details class="m-group">
+          <summary>Resources <i data-lucide="chevron-down" class="h-4 w-4"></i></summary>
+          <div class="pb-2 pl-3"><a href="blog.html" class="block py-2 text-black">Blog</a></div>
+        </details>
+        <a href="about.html" class="m-link">About Us</a>
+        <a href="contact.html" class="mt-4 rounded-full bg-btn px-5 py-3 text-center font-semibold text-white">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Page hero: background video (Mixkit free license) -->
+    <section class="relative isolate flex min-h-[640px] items-center overflow-hidden bg-ink-950 pb-20 pt-28 lg:h-[78vh]">
+      <video class="absolute inset-0 -z-20 h-full w-full object-cover" autoplay muted loop playsinline poster="https://assets.mixkit.co/videos/23219/23219-thumb-720-0.jpg">
+        <source src="https://assets.mixkit.co/videos/23219/23219-720.mp4" type="video/mp4">
+      </video>
+      <div class="page-hero-overlay absolute inset-0 -z-10"></div>
+      <div class="mx-auto w-full max-w-site px-4 sm:px-6">
+        <div class="max-w-3xl">
+          <h1 class="font-display text-3xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl">Atlassian Government Cloud, set up for your security review</h1>
+          <!-- Phones get a short version; the full paragraph shows from sm up -->
+          <p class="mt-4 text-base leading-relaxed text-white sm:hidden">We check whether AGC fits your data, then configure and document it for your ATO.</p>
+          <p class="mt-6 hidden sm:block max-w-2xl text-lg leading-relaxed text-white">Atlassian Government Cloud (AGC) is Atlassian's FedRAMP Moderate authorized cloud for U.S. government, run separately from its commercial cloud. We check whether it fits your data, then configure and document it for your ATO.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FedRAMP Moderate Government Cloud (EM 3 cards) -->
+    <section class="bg-white py-16 lg:py-24">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-black mx-auto max-w-2xl font-display text-3xl font-medium tracking-tight sm:text-5xl">FedRAMP Moderate Government Cloud</h2>
+          <p class="mt-5 text-lg leading-relaxed text-black">The Jira, Confluence and Jira Service Management your teams know, inside an authorized boundary. Here is what that gives you, and what we set up.</p>
+        </div>
+        <div data-tilt class="mt-14 grid gap-6 lg:grid-cols-3">
+          <div class="rounded-lg bg-white p-6 sm:p-8 shadow-card">
+            <span class="icon-tile"><i data-lucide="users" class="h-7 w-7"></i></span>
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Secure cloud-based collaboration</h3>
+            <p class="mt-3 leading-relaxed text-black">Jira and Confluence for planning and records, with access set by role and need-to-know.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Least-privilege permission schemes</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Space and page restrictions</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Change history on every item</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-white p-6 sm:p-8 shadow-card">
+            <span class="icon-tile"><i data-lucide="headset" class="h-7 w-7"></i></span>
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Government IT service delivery</h3>
+            <p class="mt-3 leading-relaxed text-black">Jira Service Management for requests, incidents and changes, with each approval kept on the record.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Access request workflows</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Change approvals with history</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Self-service portal and SLAs</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-white p-6 sm:p-8 shadow-card">
+            <span class="icon-tile"><i data-lucide="fingerprint" class="h-7 w-7"></i></span>
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Enterprise governance and administration</h3>
+            <p class="mt-3 leading-relaxed text-black">Identity through your agency IdP, tight admin roles and audit logs your security team can review.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>SAML SSO and SCIM provisioning</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Separate, limited admin roles</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Audit log review and export</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scope (EM Compliance With Clear Scope) -->
+    <section class="bg-sand py-16 lg:py-24">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-black mx-auto max-w-2xl font-display text-3xl font-medium tracking-tight sm:text-5xl">Compliance with clear scope</h2>
+          <p class="mt-5 text-lg leading-relaxed text-black">Know the boundary before you plan inside it. This is the scope as Atlassian announced it in March 2025. A site on Atlassian's commercial cloud is not FedRAMP Moderate, and we will not call it that.</p>
+        </div>
+        <!-- Verified Oct 2026: FedRAMP Moderate (Mar 2025) for Jira, Confluence, JSM. Recheck the FedRAMP Marketplace listing before launch. -->
+        <div data-tilt class="mt-14 grid gap-6 lg:grid-cols-2">
+          <div class="rounded-lg bg-white p-6 sm:p-8 shadow-lift">
+            <span class="icon-tile"><i data-lucide="badge-check" class="h-7 w-7"></i></span>
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Inside the authorization</h3>
+            <ul class="mt-5 grid gap-3 text-black">
+              <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>FedRAMP Moderate authorization, granted March 2025 and listed on the FedRAMP Marketplace</span></li>
+              <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>Jira, Confluence and Jira Service Management</span></li>
+              <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>An environment run separately from Atlassian's commercial cloud</span></li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-white p-6 sm:p-8 shadow-lift">
+            <span class="icon-tile"><i data-lucide="scan-search" class="h-7 w-7"></i></span>
+            <h3 class="text-black mt-6 font-display text-xl font-medium">Outside it, so check first</h3>
+            <ul class="mt-5 grid gap-3 text-black">
+              <li class="flex gap-3"><i data-lucide="circle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-steel-700"></i><span>Atlassian's commercial cloud sites</span></li>
+              <li class="flex gap-3"><i data-lucide="circle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-steel-700"></i><span>Marketplace apps. Each one has to be checked on its own.</span></li>
+              <li class="flex gap-3"><i data-lucide="circle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-steel-700"></i><span>FedRAMP High and DoD IL5. As of the March 2025 announcement, these were goals, not granted. We'll tell you plainly where AGC stands for your impact level.</span></li>
+              <li class="flex gap-3"><i data-lucide="circle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-steel-700"></i><span>AI features. These vary by deployment, so confirm what your site offers before you plan around them.</span></li>
+              <li class="flex gap-3"><i data-lucide="circle-alert" class="mt-0.5 h-5 w-5 shrink-0 text-steel-700"></i><span>Your ATO. AGC's authorization supports it, but your agency still issues it.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Readiness check (IS Strategy Through Execution + VF ASSESS) -->
+    <section class="scroll-mt-24 bg-white py-16 lg:py-24">
+      <div class="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div data-clip class="overflow-hidden rounded-lg shadow-lift "><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Server racks with network cabling" class="aspect-[4/3] w-full object-cover"></div>
+        <div>
+          <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-4xl">Check the fit before you commit</h2>
+          <p class="mt-5 text-lg leading-relaxed text-black">Our readiness check finds the gaps, friction points, security needs and dependencies that decide whether AGC works for you. We work through these questions with your program and security leads, and you leave with a written fit assessment and a plan that runs from setup through renewal.</p>
+          <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>What impact level is your data categorized at?</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>Which apps and integrations can't you live without?</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>Do users sign in with PIV/CAC through an agency IdP?</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>Which features do your teams rely on today?</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>What do your records and retention rules require?</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span>Who will own the ATO update for the move?</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery steps (VF How We Execute) -->
+    <section class="relative bg-sand py-16 lg:py-24">
+      <div class="mx-auto max-w-site px-4 sm:px-6">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-black mx-auto max-w-2xl font-display text-3xl font-medium tracking-tight sm:text-5xl">Assess, architect, operationalize, evolve</h2>
+          <p class="mt-5 text-lg text-black">Four steps from first look to a Government Cloud site your security team can stand behind.</p>
+        </div>
+      </div>
+      <div class="mx-auto mt-12 max-w-site lg:mt-14">
+        <ol class="grid gap-6 px-4 sm:px-6 md:grid-cols-2 xl:grid-cols-4">
+          <li class="hpanel">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-50 text-ink-900"><i data-lucide="search" class="h-6 w-6"></i></span>
+            <h3 class="text-black mt-5 font-display text-2xl font-medium">Assess</h3>
+            <p class="mt-3 text-black">Your data, apps, integrations and features reviewed against AGC's current scope.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Data categorization review</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>App and integration inventory</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Feature gap list</li>
+            </ul>
+          </li>
+          <li class="hpanel">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-50 text-ink-900"><i data-lucide="layers" class="h-6 w-6"></i></span>
+            <h3 class="text-black mt-5 font-display text-2xl font-medium">Architect</h3>
+            <p class="mt-3 text-black">A target site designed around your mission workflows, with security controls planned in.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Identity via your agency IdP</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Least-privilege admin roles</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Mapping to NIST SP 800-53</li>
+            </ul>
+          </li>
+          <li class="hpanel">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-50 text-ink-900"><i data-lucide="settings-2" class="h-6 w-6"></i></span>
+            <h3 class="text-black mt-5 font-display text-2xl font-medium">Operationalize</h3>
+            <p class="mt-3 text-black">The site configured, data moved in tested waves and the baseline written down.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>SAML SSO and SCIM set up</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Audit log export confirmed</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Configuration records for your ISSO</li>
+            </ul>
+          </li>
+          <li class="hpanel">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-accent-50 text-ink-900"><i data-lucide="refresh-cw" class="h-6 w-6"></i></span>
+            <h3 class="text-black mt-5 font-display text-2xl font-medium">Evolve</h3>
+            <p class="mt-3 text-black">Ongoing support that keeps the site inside its approved baseline as AGC changes.</p>
+            <ul class="mt-5 space-y-2 text-sm">
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Periodic access reviews</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Audit log checks for ConMon</li>
+              <li class="flex items-start gap-2"><i data-lucide="check" class="mt-1 h-4 w-4 shrink-0 text-teal-600"></i>Release and scope tracking</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Migration (IS Cloud Upgrades) -->
+    <section class="scroll-mt-24 bg-white py-16 lg:py-24">
+      <div class="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div data-clip class="overflow-hidden rounded-lg shadow-lift lg:order-2"><img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80" alt="IT staff with laptops in a server room" class="aspect-[4/3] w-full object-cover"></div>
+        <div>
+          <h2 class="text-black font-display text-3xl font-medium tracking-tight sm:text-5xl">Data Center ends in March 2029. Plan the move now.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-black">Atlassian is retiring Data Center. New-customer sales ended in March 2026, renewals for existing customers end in March 2028, and end of life follows in March 2029. Legacy Server is already out of support. We move you to cloud with data governance and security controls planned first, not patched in later.</p>
+          <ul class="mt-8 grid gap-5">
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><span class="font-semibold">Data governance first.</span> Decide what moves, what is archived and what your retention rules require before any data leaves.</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><span class="font-semibold">Controls rebuilt, not assumed.</span> Permissions, groups and sign-in are re-mapped for the new site and documented.</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><span class="font-semibold">Every app vetted.</span> Each app is checked for AGC availability and your security review, or replaced with native features.</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><span class="font-semibold">Test runs first.</span> Rehearse with real data in a non-production site, then validate with user acceptance testing.</span></li>
+            <li class="flex gap-3"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-teal-600"></i><span><span class="font-semibold">Rollback ready.</span> Your source instance stays intact until you confirm the new site, with a rollback plan on paper.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-sand px-4 py-16 lg:py-24 sm:px-6">
+      <!-- Fixed background image. No transform on this container, or the fixed attachment stops working. -->
+      <div class="relative mx-auto max-w-site overflow-hidden rounded-lg bg-ink-900 bg-cover bg-center lg:bg-fixed px-6 py-20 text-center text-white sm:px-16 sm:py-24"
+           style="background-image: url('assets/img/us-capitol-clouds.jpg');">
+        <div class="absolute inset-0 bg-ink-900/80"></div>
+        <div class="relative">
+          <h2 class="mx-auto max-w-3xl font-display text-3xl font-medium tracking-tight sm:text-5xl">Know where AGC stands for your data</h2>
+          <p class="mx-auto mt-5 max-w-2xl text-lg text-white/75">Book a readiness briefing with your security lead in the room. We'll tell you plainly what AGC covers for your data and impact level, what it doesn't, and what a realistic move before March 2029 looks like.</p>
+          <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="contact.html" class="inline-flex items-center justify-center gap-2 rounded-full bg-btn px-7 py-4 font-semibold text-white hover:bg-btn-dark">Talk to an expert <i data-lucide="calendar" class="h-5 w-5"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (generated: shared across pages) -->
+  <footer class="overflow-hidden bg-ink-900 text-white/70">
+    <div class="mx-auto grid max-w-site gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-block"><img src="assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" class="h-12 w-auto"></a>
+        <p class="mt-6 max-w-sm leading-relaxed">Secure Atlassian configuration, migration and support for federal, state and local government, documented for your ATO.</p>
+        <div class="mt-6 inline-flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3">
+          <img src="https://cdn.simpleicons.org/atlassian/ffffff" alt="" class="h-6 w-6">
+          <span class="text-sm"><span class="block font-semibold text-white">Platinum Solution Partner</span>Atlassian Partner Program</span>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:col-span-8">
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Expertise</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="atlassian-solutions.html" class="hover:text-white">Atlassian Solutions</a></li>
+            <li><a href="ai-solutions.html" class="hover:text-white">AI Solutions</a></li>
+            <li><a href="government-cloud.html" class="hover:text-white">Atlassian Government Cloud</a></li>
+            <li><a href="itsm.html" class="hover:text-white">ITSM &amp; Service Management</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Services</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="services.html" class="hover:text-white">Services Overview</a></li>
+            <li><a href="services.html#migrations" class="hover:text-white">Migrations</a></li>
+            <li><a href="services.html#licensing" class="hover:text-white">Licensing &amp; Consulting</a></li>
+            <li><a href="services.html#managed" class="hover:text-white">Managed Services</a></li>
+            <li><a href="services.html#professional" class="hover:text-white">Professional Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-sm font-medium uppercase tracking-[0.16em] text-white">Company</h3>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="compliance.html" class="hover:text-white">Compliance</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+            <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-site flex-col gap-3 px-4 py-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <p>&copy; <span id="year">2026</span> Clovity, Inc. All rights reserved.</p>
+        <div class="flex gap-5"><a href="#" class="hover:text-white">Privacy</a><a href="#" class="hover:text-white">Accessibility</a><a href="#" class="hover:text-white">Terms</a></div>
+      </div>
+    </div>
+    <!-- Decorative wordmark: letters rise in as the footer scrolls into view (animations.js) -->
+    <div class="footer-wordmark" aria-hidden="true"><span data-wordmark>Clovity Federal</span></div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
