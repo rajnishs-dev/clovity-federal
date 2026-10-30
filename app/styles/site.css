@@ -1,0 +1,500 @@
+/* Clovity Federal - custom styles that Tailwind utilities don't cover */
+
+
+/* Site palette as RGB triplets (used by tw-config.js), in the style of easydmarc.com:
+   midnight navy #0A1433 for headings and dark areas, royal blue #1F3D99 for raised dark panels,
+   electric blue #3366FF for buttons (#2952CC for links/labels so text stays 4.5:1 on white),
+   cool periwinkle section backgrounds (paper #F7F9FD, sand #EBF0FF) with #D6E0FF tints and borders. */
+:root {
+  --ink-950: 8 16 44;   --ink-900: 10 20 51;   --steel-700: 31 61 153;
+  --accent: 41 82 204;  --accent-dark: 31 61 153; --accent-light: 133 163 255; --accent-50: 235 240 255;
+  --panel: 245 247 255; --tint: 214 224 255; --paper: 247 249 253; --sand: 235 240 255;
+  /* Buttons stay electric blue whatever the accent theme */
+  --btn: 51 102 255; --btn-dark: 41 82 204;
+  /* Brand gradient pair: royal blue into violet, used for dark sections and highlights */
+  --grad-from: 26 51 128; --grad-violet: 160 18 255;
+}
+/* Accent themes (switcher, bottom-left): navy structure stays, only the accent changes.
+   Every accent passes 4.5:1 on white; the light tone passes on navy. "navy" is the federal blue option. */
+[data-theme="navy"] { --accent: 37 99 166; --accent-dark: 22 64 110; --accent-light: 143 184 232; --accent-50: 230 238 247; }
+[data-theme="teal"] { --accent: 15 118 110; --accent-dark: 17 94 89; --accent-light: 94 234 212; --accent-50: 230 245 243; }
+[data-theme="steel"] { --accent: 62 92 118; --accent-dark: 44 68 90; --accent-light: 169 193 217; --accent-50: 232 238 244; }
+[data-theme="indigo"] { --accent: 67 56 202; --accent-dark: 55 48 163; --accent-light: 165 180 252; --accent-50: 236 238 254; }
+[data-theme="emerald"] { --accent: 4 120 87; --accent-dark: 6 95 70; --accent-light: 110 231 183; --accent-50: 227 245 238; }
+[data-theme="burgundy"] { --accent: 140 29 64; --accent-dark: 112 20 50; --accent-light: 231 154 178; --accent-50: 247 232 237; }
+[data-theme="gold"] { --accent: 138 106 20; --accent-dark: 110 84 14; --accent-light: 226 194 110; --accent-50: 248 241 223; }
+html { scroll-behavior: smooth; }
+/* CSS smooth scrolling breaks ScrollTrigger's measurements (pinned sections land out of place); animations.js smooth-scrolls anchors instead */
+html.gsap-on { scroll-behavior: auto; }
+/* Clip sideways overflow on html too: on phones, off-screen slider cards or animated items would otherwise widen the page and push the header out of view */
+html { overflow-x: clip; }
+body { -webkit-font-smoothing: antialiased; overflow-x: clip; }
+
+
+/* Hero video: real footage, slightly muted so text stays readable */
+.hero-video { filter: saturate(.95) brightness(1.08); }
+/* Banner overlays: navy mixed 50/50 with black at both edges around a darkened royal blue centre so white text reads over the video; the right edge is a little lighter */
+.hero-overlay, .page-hero-overlay { background: linear-gradient(100deg, rgb(5 10 26 / .65) 0%, rgb(13 26 64 / .40) 50%, rgb(5 10 26 / .50) 100%); }
+
+
+/* Subtle dotted grid used on light sections */
+.dot-grid {
+  background-image: radial-gradient(rgba(22,22,24,.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+/* Light blue sections get a faint wash in opposite corners (electric blue top left, violet bottom right) */
+section.bg-sand { background-image: radial-gradient(ellipse 45% 55% at 0% 0%, rgb(var(--btn) / .10), transparent 70%),
+  radial-gradient(ellipse 45% 55% at 100% 100%, rgb(var(--grad-violet) / .07), transparent 70%); }
+/* White and paper sections fade from white into the periwinkle tint, like the reference's card backgrounds */
+section.bg-paper { background-image: linear-gradient(160deg, #fff 10%, rgb(var(--panel)) 95%); }
+/* Dark CTA boxes: midnight navy sweeping into royal blue */
+div.bg-ink-900.rounded-lg { background-image: linear-gradient(100deg, rgb(var(--ink-900)) 15%, rgb(var(--grad-from)) 75%, rgb(var(--steel-700)) 100%); }
+/* Footer keeps the original Clovity Federal logo palette (solid navy #04213F, light blue accents) */
+footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
+  --accent: 46 117 182; --accent-dark: 39 104 165; --accent-light: 147 197 253; --accent-50: 234 240 247;
+  --btn: 74 144 217; --btn-dark: 61 130 196; }
+.dot-grid-dark {
+  background-image: radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Header state after scrolling */
+#site-header.is-scrolled { background: rgba(255,255,255,.96); box-shadow: 0 1px 0 rgba(16,16,20,.08); backdrop-filter: blur(8px); }
+#site-header.is-scrolled .nav-link { color: rgb(var(--ink-900)); }
+#site-header.is-scrolled .logo-light { display: none; }
+#site-header.is-scrolled .logo-dark { display: block; }
+#site-header.is-scrolled .header-cta-ghost { color: rgb(var(--ink-900)); border-color: rgb(var(--ink-900) / .2); }
+#site-header.is-scrolled .menu-btn { color: rgb(var(--ink-900)); }
+
+/* Primary navigation */
+.nav-link { display: inline-flex; align-items: center; gap: .25rem; font-size: 15px; font-weight: 500; color: rgb(255 255 255 / .92); transition: color .2s; }
+.nav-link:hover, .nav-link.is-active { color: #fff; }
+.nav-link.is-active { text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; text-decoration-color: rgb(var(--accent-light)); }
+#site-header.is-scrolled .nav-link.is-active { color: rgb(var(--accent)); text-decoration-color: rgb(var(--accent)); }
+
+/* Dropdowns: centered under their menu item, fade and rise on hover or keyboard focus */
+.mega { left: 50%; opacity: 0; visibility: hidden; transform: translate(-50%, 8px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+.has-menu:hover .mega, .has-menu:focus-within .mega { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+.has-menu:hover .nav-link svg, .has-menu:focus-within .nav-link svg { transform: rotate(180deg); }
+/* After a dropdown link is clicked the header stays on screen (client-side navigation); keep that dropdown shut until the pointer leaves */
+.has-menu.is-shut .mega { opacity: 0; visibility: hidden; transform: translate(-50%, 8px); }
+.has-menu.is-shut .nav-link svg { transform: none; }
+.nav-link svg { transition: transform .2s ease; }
+.dropdown { border-radius: .5rem; background: #fff; padding: .5rem; box-shadow: 0 2px 4px rgba(10,20,51,.06), 0 24px 48px -20px rgba(10,20,51,.35); gap: 8px; display: flex; flex-direction: column; }
+.dropdown-grid{display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));}
+.dd-item { display: block; border-radius: .7rem; padding: .7rem 1rem; color: rgb(var(--ink-900)); font-weight: 500; transition: background .15s, color .15s; }
+.dd-item:hover, .dd-item.is-current { background: rgb(var(--sand)); color: rgb(var(--accent)); }
+.dd-rich { display: flex; gap: .9rem; align-items: center; }
+.dd-icon { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; flex-shrink: 0; border-radius: .7rem; background: rgb(var(--accent-50)); color: #000; }
+/* The open page's submenu link (main.js .is-current) looks the same as a hovered one */
+.dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon { background: rgb(var(--accent)); color: #fff; }
+.m-group a.is-current { color: rgb(var(--accent)); font-weight: 600; }
+
+/* Mobile menu groups */
+.m-group, .m-link { border-bottom: 1px solid rgb(var(--ink-900) / .08); }
+.m-group summary { display: flex; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; padding: .8rem 0; font-weight: 600; color: #000; }
+.m-group summary::-webkit-details-marker { display: none; }
+.m-group[open] summary svg { transform: rotate(180deg); }
+.m-link { display: block; padding: .8rem 0; font-weight: 600; color: rgb(var(--ink-900)); }
+/* Mobile menu panel (main.js adds .m-panel): unrolls from the header downward, links drift in after it */
+.m-panel {
+  position: absolute; left: 0; right: 0; top: 100%;
+  box-shadow: 0 24px 40px -24px rgb(var(--ink-950) / .35);
+  clip-path: inset(0 0 100% 0); visibility: hidden;
+  transition: clip-path .45s cubic-bezier(.65,0,.35,1), visibility 0s linear .45s;
+}
+.m-panel.is-open { clip-path: inset(0 0 -40px 0); visibility: visible; transition: clip-path .45s cubic-bezier(.65,0,.35,1); }
+.m-panel nav { opacity: 0; transform: translateY(-12px); transition: opacity .3s ease, transform .3s ease; }
+.m-panel.is-open nav { opacity: 1; transform: none; transition-delay: .15s; }
+/* Dimmed backdrop behind the open menu; sits under the fixed header (z-40) */
+.m-overlay {
+  position: fixed; inset: 0; z-index: 30; background: rgb(var(--ink-950) / .55); backdrop-filter: blur(2px);
+  opacity: 0; visibility: hidden; transition: opacity .35s ease, visibility 0s linear .35s;
+}
+.m-overlay.is-open { opacity: 1; visibility: visible; transition: opacity .35s ease; }
+@media (min-width: 1024px) { .m-overlay { display: none; } }
+@media (prefers-reduced-motion: reduce) { .m-panel, .m-panel nav, .m-overlay { transition: none !important; } }
+
+/* Shared section bits */
+.eyebrow { font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; }
+.icon-tile { display: grid; place-items: center; width: 3.75rem; height: 3.75rem; border-radius: .9rem; background: rgb(var(--accent-50)); color: rgb(var(--ink-900)); }
+.icon-tile-sm { width: 3.25rem; height: 3.25rem; flex-shrink: 0; }
+
+/* Card hover underline */
+.card-link .arrow { transition: transform .2s ease; }
+.card-link:hover .arrow { transform: translateX(4px); }
+
+/* Tabs */
+.tab-btn[aria-selected="true"] { background: rgb(var(--ink-900)); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+#site-header.is-scrolled .nav-link:hover { color: rgb(var(--accent)); }
+
+/* Who we serve: expanding accordion. Stacked on mobile, horizontal columns on desktop. */
+.sectors { display: flex; flex-direction: column; gap: .75rem; }
+.sector { position: relative; overflow: hidden; border-radius: .5rem; background: rgb(var(--steel-700)); }
+.sector-tab {
+  display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1rem; color: #fff; text-align: left; cursor: pointer;
+}
+.sector-label {
+  display: inline-flex; align-items: center; gap: .6rem; border-radius: .6rem;
+  background: #fff; color: rgb(var(--steel-700)); padding: .6rem 1rem; font-weight: 600; white-space: nowrap;
+}
+.sector-expand {
+  display: grid; place-items: center; width: 2.75rem; height: 2.75rem; flex-shrink: 0;
+  border-radius: .6rem; background: #fff; color: rgb(var(--steel-700));
+}
+.sector-tab:focus-visible { outline: 3px solid rgb(var(--accent-light)); outline-offset: -3px; border-radius: .5rem; }
+.sector-panel { display: none; position: relative; background: rgb(var(--panel)); }
+.sector.is-active { background: rgb(var(--panel)); }
+.sector.is-active .sector-panel { display: block; animation: sector-in .5s ease both; }
+.sector.is-active .sector-tab { display: none; }
+@keyframes sector-in { from { opacity: 0; } to { opacity: 1; } }
+
+@media (min-width: 1024px) {
+  .sectors { --sector-closed: 96px; flex-direction: row; height: 560px; }
+  .sector { flex: 0 0 var(--sector-closed); }
+  .sector.is-active { flex: 1 1 0; }
+  .sector-tab { height: 100%; flex-direction: column; padding: 1.25rem 0; }
+  .sector-label { writing-mode: vertical-rl; transform: rotate(180deg); padding: 1rem .6rem; }
+  /* Tab and panel are stacked and cross-fade while the columns resize. The panel is laid out at its final open width
+     (--sector-open-w, set by main.js) and clipped by the column, so its text never rewraps mid-animation. */
+  .sector { transition: flex .7s cubic-bezier(.65,0,.35,1), background-color .5s ease; }
+  .sector-tab { position: absolute; inset: 0; z-index: 1; opacity: 1; transition: opacity .3s ease .3s; }
+  .sector.is-active .sector-tab { display: flex; opacity: 0; visibility: hidden; transition: opacity .2s ease, visibility 0s linear .2s; }
+  .sector-panel { display: block; position: absolute; inset: 0 auto 0 0; width: var(--sector-open-w, 1000px);
+    opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility 0s linear .25s; }
+  .sector.is-active .sector-panel { animation: none; opacity: 1; visibility: visible; transition: opacity .45s ease .25s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sector, .sector.is-active .sector-panel { transition: none; animation: none; }
+}
+
+/* Approach phase panels */
+.hpanel { border-radius: .5rem; background: #fff; padding: 1.25rem 1.25rem 2rem; box-shadow: 0 1px 2px rgba(16,16,20,.04), 0 18px 40px -24px rgba(16,16,20,.25); }
+/* Step titles share a row with their icon tile; a slightly smaller size keeps long words ("Operationalize") from pushing the tile out of the card */
+.hpanel h3 { min-width: 0; font-size: 1.625rem; line-height: 1.2; }
+
+/* Execution steps: bento grid of photo cards. Deliverables slide up on hover/focus where hover exists, always shown on touch */
+.bento { display: grid; gap: 1.25rem; }
+.bento-card { position: relative; isolation: isolate; min-height: 22rem; overflow: hidden; border-radius: .5rem; background: rgb(var(--ink-950)); color: #fff;
+  box-shadow: 0 24px 50px -30px rgba(10,20,51,.55); }
+.bento-card:focus-visible { outline: 3px solid rgb(var(--accent) / .5); outline-offset: 3px; }
+.bento-card img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.bento-card:hover img, .bento-card:focus-within img { transform: scale(1.06); }
+.bento-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgb(var(--ink-950) / .85) 0%, rgb(var(--ink-950) / .35) 40%, rgb(var(--ink-950) / 0) 70%); }
+.bento-content { display: flex; flex-direction: column; height: 100%; min-height: inherit; padding: 1.75rem; }
+.bento-list { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+.bento-list li { display: inline-flex; align-items: center; gap: .4rem; padding: .4rem .85rem; border: 1px solid rgb(255 255 255 / .18); border-radius: 999px;
+  background: rgb(255 255 255 / .1); font-size: .875rem; backdrop-filter: blur(6px); }
+/* Small screens and touch: the deliverables are always shown, so the text runs higher up the photo and needs a darker shade */
+@media (max-width: 1023px), (hover: none) {
+  .bento-shade { background: linear-gradient(to top, rgb(var(--ink-950) / .92) 0%, rgb(var(--ink-950) / .78) 55%, rgb(var(--ink-950) / .45) 100%); }
+}
+@media (min-width: 1024px) {
+  .bento { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .bento-content { padding: 2.25rem; }
+}
+@media (min-width: 1024px) and (hover: hover) {
+  .bento-list { max-height: 0; margin-top: 0; opacity: 0; transform: translateY(12px); overflow: hidden; transition: max-height .45s ease, margin-top .45s ease, opacity .35s ease, transform .45s ease; }
+  .bento-card:hover .bento-list, .bento-card:focus-within .bento-list { max-height: 8rem; margin-top: 1rem; opacity: 1; transform: none; }
+  /* Dark ink overlay rises from the bottom edge on hover/focus */
+  .bento-shade::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(var(--ink-950) / .8) 0%, rgb(var(--ink-950) / .55) 50%, rgb(var(--ink-950) / .3) 100%);
+    transform: translateY(100%); transition: transform .5s cubic-bezier(.65,0,.35,1); }
+  .bento-card:hover .bento-shade::after, .bento-card:focus-within .bento-shade::after { transform: none; }
+}
+
+/* Statement words: dim until the scroll animation fills them in */
+.gsap-on [data-fill] .fill-word { color: #CBD5E1; }
+
+/* Statement vectors (inline SVG beside each statement): site colors, gentle looping motion */
+.sv { overflow: visible; }
+.sv-bg { fill: rgb(var(--paper)); }
+.sv-orbit { fill: none; stroke: rgb(var(--ink-900) / .14); stroke-width: 1.5; stroke-dasharray: 4 9; }
+.sv-line { fill: none; stroke: rgb(var(--ink-900) / .12); stroke-width: 2; }
+/* Colour families for diagram nodes and their flow lines (same palette as the brand icons); untagged parts stay blue/navy */
+.sv-blue { --tone: var(--accent); --tone-50: var(--accent-50); }
+.sv-teal { --tone: 13 148 136; --tone-50: 222 245 241; }
+.sv-violet { --tone: 124 58 237; --tone-50: 240 235 254; }
+.sv-amber { --tone: 217 119 6; --tone-50: 254 243 222; }
+.sv-green { --tone: 22 163 74; --tone-50: 226 246 232; }
+.sv-flow { fill: none; stroke: rgb(var(--tone, var(--accent))); stroke-width: 2.5; stroke-linecap: round; stroke-dasharray: 6 14; animation: sv-flow 1.6s linear infinite; }
+.sv-card { fill: #fff; stroke: rgb(var(--ink-900) / .08); }
+.sv-card-g { filter: drop-shadow(0 8px 14px rgba(10,20,51,.12)); }
+.sv-chip { fill: rgb(var(--tone-50, var(--accent-50))); }
+.sv-accent { fill: rgb(var(--tone, var(--accent))); }
+.sv-ink { fill: rgb(var(--ink-900)); }
+.sv-ink-s { fill: none; stroke: rgb(var(--tone, var(--ink-900))); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sv-label { font: 600 15px var(--font-manrope), Manrope, sans-serif; fill: rgb(var(--ink-900)); }
+.sv-pulse { fill: rgb(var(--accent) / .18); transform-origin: 210px 210px; animation: sv-pulse 2.6s ease-out infinite; }
+.sv-spin { transform-origin: 210px 210px; animation: sv-spin 40s linear infinite; }
+.sv-float { animation: sv-float 5s ease-in-out infinite; }
+@keyframes sv-flow { to { stroke-dashoffset: -40; } }
+@keyframes sv-pulse { from { transform: scale(.9); opacity: .9; } to { transform: scale(1.45); opacity: 0; } }
+@keyframes sv-spin { to { transform: rotate(360deg); } }
+@keyframes sv-float { 50% { transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { .sv-flow, .sv-pulse, .sv-spin, .sv-float { animation: none; } }
+
+/* Footer wordmark: large, faint brand name centered on the bottom edge of every page, with a rule either side */
+.footer-wordmark {
+  display: flex; align-items: center;
+  font-family: var(--font-manrope), Manrope, sans-serif; font-weight: 700; white-space: nowrap; user-select: none;
+  font-size: clamp(2.25rem, 7.5vw, 7.5rem); line-height: 1.05; letter-spacing: -.045em;
+  color: rgb(255 255 255 / .3);
+  /* line up with the 1240px content column; keep descenders (the y) fully visible */
+  padding: 1.5rem max(1rem, calc((100vw - 1240px) / 2 + 1.5rem)) .12em;
+}
+.footer-wordmark::before, .footer-wordmark::after { content: ""; flex: 1; height: 2px; min-width: 1.5rem; background: rgb(255 255 255 / .2); }
+.footer-wordmark::before { margin-right: clamp(1rem, 3vw, 2.5rem); }
+.footer-wordmark::after { margin-left: clamp(1rem, 3vw, 2.5rem); }
+.footer-wordmark .wm-letter { display: inline-block; will-change: transform; }
+
+/* Gains: sticky intro beside a list of results. With GSAP, the result at screen centre lights up and gets an accent rule; otherwise all show at full strength */
+.gain-step { position: relative; padding: 0 0 3.5rem 2.25rem; transition: opacity .5s ease; }
+.gain-step:last-child { padding-bottom: 0; }
+.gain-step::before { content: ''; position: absolute; left: -1.5px; top: 0; bottom: 0; width: 2px; background: rgb(var(--accent)); transform: scaleY(0); transform-origin: top; transition: transform .6s ease; }
+@media (min-width: 1024px) {
+  .gain-step { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+}
+.gsap-on .gain-step { opacity: .3; }
+.gsap-on .gain-step.is-active { opacity: 1; }
+.gsap-on .gain-step.is-active::before { transform: scaleY(1); }
+
+/* ===== Section layouts beyond cards (driven by animations.js; every one reads fine without JS) ===== */
+
+/* Editorial rows: icon, title and text on one ruled line. Rules draw in from the left as each row scrolls up */
+.rows { border-bottom: 1px solid rgb(var(--ink-900) / .12); }
+.row-item { position: relative; display: grid; gap: 1rem; padding: 2rem 0; }
+.row-item::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 1px; background: rgb(var(--ink-900) / .18); transform: scaleX(var(--line, 1)); transform-origin: left; }
+.row-icon { display: grid; place-items: center; width: 4.25rem; height: 4.25rem; border-radius: 999px; border: 1px solid rgb(var(--ink-900) / .15); color: rgb(var(--ink-900)); transition: background .3s ease, color .3s ease, border-color .3s ease; }
+/* Hover uses the separate translate property so it never fights the GSAP transform on entry */
+.row-title { transition: translate .35s ease, color .3s ease; }
+.row-item:hover .row-icon { background: rgb(var(--accent)); border-color: rgb(var(--accent)); color: #fff; }
+.row-item:hover .row-title { translate: 6px 0; color: rgb(var(--accent)); }
+@media (min-width: 1024px) {
+  .row-item { grid-template-columns: 4.5rem minmax(0, 1fr) minmax(0, 1.25fr); align-items: center; gap: 2.5rem; padding: 2.5rem 0; }
+}
+
+/* Timeline: a rule fills downward as you scroll and each step's marker lights up as the fill reaches it.
+   Single column on small screens; alternating sides around a centre rule from lg up */
+.timeline { --rail: 1.75rem; --dot: 3.5rem; position: relative; padding-left: 4.75rem; }
+.timeline::before, .timeline::after { content: ''; position: absolute; top: .5rem; bottom: .5rem; left: var(--rail); width: 2px; margin-left: -1px; background: rgb(var(--ink-900) / .12); }
+.timeline::after { background: rgb(var(--accent)); transform: scaleY(var(--fill, 1)); transform-origin: top; }
+.tl-item { position: relative; padding-bottom: 2.5rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot { position: absolute; z-index: 1; top: -.6rem; left: calc(var(--rail) - 4.75rem - var(--dot) / 2); display: grid; place-items: center; width: var(--dot); height: var(--dot); border-radius: 999px;
+  border: 2px solid rgb(var(--accent)); background: rgb(var(--accent)); color: #fff; transition: background .35s ease, color .35s ease, border-color .35s ease, transform .35s ease; }
+.gsap-on .tl-item:not(.is-on) .tl-dot { background: #fff; border-color: rgb(var(--ink-900) / .15); color: rgb(var(--ink-900)); }
+.tl-item.is-on .tl-dot { transform: scale(1.08); }
+.tl-body { transition: opacity .4s ease, transform .4s ease; }
+.gsap-on .tl-item:not(.is-on) .tl-body { opacity: .45; }
+@media (min-width: 1024px) {
+  .timeline { --rail: 50%; padding-left: 0; }
+  .tl-item { width: 50%; padding: 0 3.5rem 3rem 0; text-align: right; }
+  .tl-item:nth-of-type(even) { margin-left: 50%; padding: 0 0 3rem 3.5rem; text-align: left; }
+  .tl-item + .tl-item { margin-top: -1.5rem; }
+  .tl-dot { left: auto; right: calc(var(--dot) / -2); }
+  .tl-item:nth-of-type(even) .tl-dot { right: auto; left: calc(var(--dot) / -2); }
+}
+
+/* Spotlight: a list on one side, a sticky navy panel on the other that swaps to the item at the middle of the screen (lg up) */
+.spot { display: grid; gap: 2rem; }
+.spot-media { display: none; }
+.spot-item { display: flex; gap: 1.25rem; transition: opacity .4s ease; }
+@media (min-width: 1024px) {
+  .spot { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 5rem; }
+  .spot-list { padding: 0 0 4rem; }
+  .spot-item { min-height: 13rem; align-items: center; }
+  .gsap-on .spot-item:not(.is-active) { opacity: .45; }
+  .spot-media { display: block; position: sticky; top: 7.5rem; height: min(34rem, calc(100vh - 10rem)); }
+}
+.spot-frame { position: relative; height: 100%; overflow: hidden; border-radius: .5rem; background: rgb(var(--ink-900)); color: #fff; isolation: isolate; }
+.spot-frame::before, .spot-frame::after { content: ''; position: absolute; z-index: -1; border-radius: 999px; border: 1px solid rgb(255 255 255 / .08); }
+.spot-frame::before { width: 34rem; height: 34rem; right: -12rem; bottom: -12rem; }
+.spot-frame::after { width: 22rem; height: 22rem; right: -6rem; bottom: -6rem; background: rgb(var(--accent) / .12); }
+.spot-panel { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 2.75rem; opacity: 0; transform: translateY(24px); transition: opacity .5s ease, transform .6s cubic-bezier(.2,.7,.2,1); }
+.spot-panel.is-active { opacity: 1; transform: none; }
+.spot-panel-icon { display: grid; place-items: center; width: 5.5rem; height: 5.5rem; margin-bottom: auto; border-radius: 1.5rem; background: rgb(255 255 255 / .08); color: rgb(var(--accent-light)); }
+
+/* Track: cards in one row. Swipe on touch and small screens; on large screens the section pins and the row slides sideways as you scroll */
+.track-wrap { overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin: 0 -1rem; padding: 0 1rem 1rem; }
+.track-wrap::-webkit-scrollbar { display: none; }
+.track { display: flex; gap: 1.25rem; width: max-content; }
+.track > * { flex: 0 0 auto; width: min(82vw, 24rem); scroll-snap-align: start; }
+.track-bar { height: 2px; margin-top: 2.5rem; background: rgb(var(--ink-900) / .1); }
+.track-bar span { display: block; height: 100%; background: rgb(var(--accent)); transform: scaleX(var(--progress, 0)); transform-origin: left; }
+@media (min-width: 640px) { .track-wrap { margin: 0 -1.5rem; padding: 0 1.5rem 1rem; } }
+@media (min-width: 1024px) {
+  .track > * { width: 26rem; }
+  .gsap-on .track-wrap { overflow: visible; margin: 0; padding: 0; }
+}
+.track-bar { display: none; }
+@media (min-width: 1024px) { .gsap-on .track-bar { display: block; } }
+.row-item:hover .arrow { transform: translateX(4px); }
+
+/* Carousel: active card centred, neighbours faded and scaled down either side, looping (main.js [data-carousel]).
+   Before the script runs (.is-ready) it is a plain swipeable row */
+.carousel { --cw: min(72vw, 24rem); --cgap: 1rem; }
+.carousel-stage { display: flex; gap: var(--cgap); overflow-x: auto; scroll-snap-type: x mandatory; }
+.carousel-card { flex: 0 0 var(--cw); scroll-snap-align: center; }
+.carousel.is-ready .carousel-stage { position: relative; display: block; overflow: visible; touch-action: pan-y; }
+.carousel.is-ready .carousel-card { position: absolute; top: 0; left: 50%; width: var(--cw); margin-left: calc(var(--cw) / -2);
+  transition: transform .6s cubic-bezier(.22,.61,.36,1), opacity .5s ease, box-shadow .4s ease; cursor: pointer; }
+.carousel.is-ready .carousel-card.is-active { cursor: default; box-shadow: 0 2px 4px rgba(16,16,20,.05), 0 30px 60px -30px rgba(10,20,51,.35); }
+@media (min-width: 1024px) { .carousel { --cw: calc((100% - 3rem) / 3); --cgap: 1.5rem; } }
+/* Controls: filled navy arrows, dots that stretch into an accent bar for the active slide */
+.carousel-btn { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 999px; background: rgb(var(--ink-900)); color: #fff; transition: background .2s ease, transform .2s ease; }
+.carousel-btn:hover { background: rgb(var(--btn)); }
+.carousel-btn:active { transform: scale(.94); }
+.carousel-btn:focus-visible, .carousel-dot:focus-visible { outline: 3px solid rgb(var(--accent) / .45); outline-offset: 3px; }
+.carousel-dot { width: .6rem; height: .6rem; border-radius: 999px; background: rgb(var(--ink-900) / .2); transition: width .35s ease, background .35s ease; }
+.carousel-dot[aria-current="true"] { width: 2rem; background: rgb(var(--accent)); }
+@media (prefers-reduced-motion: reduce) { .carousel.is-ready .carousel-card, .carousel-dot { transition: none; } }
+.carousel-btn-side { position: absolute; z-index: 20; top: 50%; transform: translateY(-50%); box-shadow: 0 10px 24px -10px rgb(var(--ink-950) / .5); }
+.carousel-btn-side:active { transform: translateY(-50%) scale(.94); }
+
+/* Displacement slider: a framed photo that warps into the next (WebGL, main.js [data-wslider]), with a big title
+   that slides up through a mask and vertical dots whose ring fills during autoplay. Without WebGL the photos cross-fade */
+.ws { --ws-ms: 6000ms; }
+.ws-media { position: relative; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; border-radius: .5rem; background: rgb(var(--ink-900));
+  box-shadow: 0 40px 80px -40px rgb(0 0 0 / .6); }
+.ws-img, .ws-canvas { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ws-img { opacity: 0; transform: scale(1.06); transition: opacity 1.2s ease, transform 6s ease; }
+.ws-img.is-active { opacity: 1; transform: none; }
+.ws-canvas { opacity: 0; transition: opacity .6s ease; }
+.ws.is-gl .ws-canvas { opacity: 1; }
+.ws.is-gl .ws-img { visibility: hidden; }
+@media (min-width: 1024px) { .ws-media { flex: 1; } }
+.ws-panels { display: grid; }
+.ws-panel { grid-area: 1 / 1; visibility: hidden; transition: visibility 0s linear .9s; }
+.ws-panel.is-active { visibility: visible; transition: none; }
+.ws-title { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.1; letter-spacing: -.02em; }
+.ws-mask { display: block; overflow: hidden; padding-bottom: .14em; }
+.ws-mask > span { display: block; transform: translateY(130%); transition: transform .9s cubic-bezier(.77,0,.18,1); }
+.ws-panel.is-active .ws-mask > span { transform: none; transition-delay: .45s; }
+.ws-panel.is-leaving .ws-mask > span { transform: translateY(-130%); }
+.ws-text { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+.ws-panel.is-active .ws-text { opacity: 1; transform: none; transition-delay: .85s; }
+/* Dots: a row under the photo on small screens, a column beside it on large ones */
+.ws-dots { display: flex; gap: .25rem; }
+@media (min-width: 1024px) { .ws-dots { flex-direction: column; } }
+.ws-dot { position: relative; display: grid; place-items: center; width: 2.75rem; height: 2.75rem; }
+.ws-dot svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.ws-ring-track, .ws-ring { fill: none; stroke-width: 1.5; }
+.ws-ring-track { stroke: rgb(var(--ink-900) / 0); transition: stroke .3s ease; }
+.ws-ring { stroke: rgb(var(--accent)); stroke-dasharray: 113.1; stroke-dashoffset: 113.1; }
+.ws-dot[aria-selected="true"] .ws-ring-track { stroke: rgb(var(--ink-900) / .15); }
+.ws.is-running .ws-dot[aria-selected="true"] .ws-ring { animation: ws-ring var(--ws-ms) linear forwards; }
+@keyframes ws-ring { to { stroke-dashoffset: 0; } }
+.ws-dot-core { width: .5rem; height: .5rem; border-radius: 999px; background: rgb(var(--ink-900) / .25); transition: background .3s ease, transform .3s ease; }
+.ws-dot:hover .ws-dot-core { background: rgb(var(--ink-900) / .6); }
+.ws-dot[aria-selected="true"] .ws-dot-core { background: rgb(var(--ink-900)); transform: scale(1.35); }
+.ws-dot:focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 2px; border-radius: 999px; }
+@media (prefers-reduced-motion: reduce) { .ws-img, .ws-mask > span, .ws-text { transition: none !important; } }
+/* Spotlight panels with a photo: the image fills the panel under a navy overlay, and only the text slides in */
+.spot-panel:has(.spot-panel-img) { isolation: isolate; overflow: hidden; transform: none; }
+.spot-panel:has(.spot-panel-img)::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to top, rgb(var(--ink-950) / .92) 0%, rgb(var(--ink-950) / .6) 45%, rgb(var(--ink-950) / .2) 100%); }
+.spot-panel-img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 1.4s cubic-bezier(.22,.61,.36,1); }
+.spot-panel.is-active .spot-panel-img { transform: none; }
+.spot-panel:has(.spot-panel-img) > p { transform: translateY(16px); transition: transform .7s cubic-bezier(.22,.61,.36,1) .1s; }
+.spot-panel.is-active:has(.spot-panel-img) > p { transform: none; }
+
+/* Lenis smooth scrolling (animations.js): its recommended base styles */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* Brand line icons (icons.js): a constant 2.25px outline at any size, with one accent part in the icon's colour family
+   (data-tone, set by main.js from CF_ICON_TONES; blue when unlisted). Tiles holding a toned icon take that family's light tint. */
+.cf-icon * { stroke-width: 2.25px; vector-effect: non-scaling-stroke; }
+.cf-icon .a { stroke: rgb(var(--tone, var(--accent))); }
+.cf-icon .af { fill: rgb(var(--tone, var(--accent))); stroke: none; }
+.cf-icon[data-tone="teal"] { --tone: 13 148 136; }
+.cf-icon[data-tone="violet"] { --tone: 124 58 237; }
+.cf-icon[data-tone="amber"] { --tone: 217 119 6; }
+.cf-icon[data-tone="green"] { --tone: 22 163 74; }
+/* Icon tiles, row circles, timeline dots and the h-12 icon squares are solid in their icon's colour family with a white
+   glyph, like product logos. The family is read off the icon inside (:has) so the tile and glyph always match. */
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="teal"]) { --tone: 13 148 136; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="violet"]) { --tone: 124 58 237; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="amber"]) { --tone: 217 119 6; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="green"]) { --tone: 22 163 74; }
+:is(.icon-tile, span.grid.h-12, .row-icon):has(> .cf-icon) { background: rgb(var(--tone, var(--accent))); border-color: rgb(var(--tone, var(--accent))); color: #fff; box-shadow: none; }
+.row-item:hover .row-icon:has(> .cf-icon) { background: rgb(var(--tone, var(--accent))); border-color: rgb(var(--tone, var(--accent))); filter: brightness(.9); }
+.tl-dot:has(> .cf-icon) { background: rgb(var(--tone, var(--accent))); border-color: rgb(var(--tone, var(--accent))); }
+/* Steps not yet reached keep their colour, just softer, so the timeline still reads as progress */
+.gsap-on .tl-item:not(.is-on) .tl-dot:has(> .cf-icon) { background: rgb(var(--tone, var(--accent))); border-color: rgb(var(--tone, var(--accent))); color: #fff; opacity: .55; }
+:is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon :is(.a, .af) { stroke: currentColor; }
+:is(.icon-tile, span.grid.h-12, .row-icon) > .cf-icon .af { fill: currentColor; stroke: none; }
+/* Where the icon sits on the accent or steel blue, or turns accent on hover, the accent takes the icon colour so it stays visible */
+:is(.bg-accent, .bg-steel-700, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .a { stroke: currentColor; }
+:is(.bg-accent, .bg-steel-700, .sector-label, .rounded-full.bg-accent, .dd-rich:hover .dd-icon, .dd-rich.is-current .dd-icon, .row-item:hover .row-icon, .tl-dot, .orbit-node.is-active) .cf-icon .af { fill: currentColor; }
+/* On navy, the lighter accent tint reads better */
+:is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .a { stroke: rgb(var(--accent-light)); }
+:is(.bg-ink-900, .bg-ink-950, footer) .cf-icon .af { fill: rgb(var(--accent-light)); }
+/* Header dropdown icons are plain black, accent part included (hover keeps the white-on-accent tile) */
+.dd-icon .cf-icon .a { stroke: currentColor; }
+.dd-icon .cf-icon .af { fill: currentColor; }
+/* Feature icons that stand alone in a card (no tile behind them) are drawn larger */
+div > svg.cf-icon.h-7.w-7, a > svg.cf-icon.h-7.w-7 { width: 3rem; height: 3rem; }
+.icon-tile > svg.cf-icon, .dd-icon > svg.cf-icon { width: 66%; height: 66%; }
+/* Icons inside layout markers (timeline dots, row circles, spotlight list tiles) fill more of their circle or tile */
+.tl-dot > svg, .row-icon > svg { width: 60%; height: 60%; }
+.spot-item .icon-tile-sm { width: 3.75rem; height: 3.75rem; }
+.spot-item .icon-tile-sm > svg { width: 64%; height: 64%; }
+/* Brand icons that lead a list item (who-does-what lists) sit on a solid tile in their colour family with a white glyph,
+   like product logos, and are larger than the small check marks beside other lists */
+li > svg.cf-icon.h-5.w-5 { width: 2.25rem; height: 2.25rem; margin-top: -.2rem; padding: .4rem; border-radius: .5rem;
+  background: rgb(var(--tone, var(--accent))); color: #fff; }
+li > svg.cf-icon.h-5.w-5 .a { stroke: currentColor; }
+li > svg.cf-icon.h-5.w-5 .af { fill: currentColor; }
+/* Warning icons in "outside our scope" lists stay plain amber, without the tile */
+li > svg.cf-icon.h-5.w-5[data-icon="circle-alert"] { width: 1.75rem; height: 1.75rem; margin-top: 0; padding: 0; background: none; color: rgb(var(--tone)); }
+
+/* Phones (below sm): every section's content is centred. Icons and inline links centre with it; lists keep their
+   tick beside the text but sit in the middle. Forms, the timeline rail and the FAQ stay left-aligned so they still read */
+@media (max-width: 639px) {
+  main section { text-align: center; }
+  main section :is(.icon-tile, .row-icon, .stack-card-icon, .tl-dot, :is(li, div, article) > span.grid.shrink-0:first-child) { margin-inline: auto; }
+  main section :is(div, a, article) > :is(svg.cf-icon, img[src*="img/icons/"]) { display: block; margin-inline: auto; }
+  /* A small icon beside a line of text stays in front of it, reading left to right */
+  main section .flex:has(> svg.cf-icon.shrink-0) { text-align: left; }
+  main section .w-max, main section .inline-flex, main section .flex.items-center, main section .flex.flex-wrap { justify-content: center; margin-inline: auto; }
+  main section .w-max { display: flex; }
+  /* Lists start at the left edge like normal text, so every tick lines up */
+  main section :is(ul.grid, ul.space-y-2, ul.space-y-3, ul.space-y-4) { justify-items: start; text-align: left; }
+  main section ul li { text-align: left; }
+  main section li.flex { justify-content: flex-start; text-align: left; }
+  main section :is(.max-w-md, .max-w-lg, .max-w-xl, .max-w-2xl, .max-w-sm) { margin-inline: auto; }
+  main section .row-item { justify-items: center; }
+  main section :is(.spot-item, .flex:has(> .icon-tile-sm), .flex:has(> span.grid.shrink-0:first-child)) { flex-direction: column; align-items: center; }
+  /* Keep these left-aligned */
+  main section :is(form, details, .timeline, .m-group) { text-align: left; }
+  main section :is(form, details, .timeline) :is(.flex, .inline-flex) { justify-content: flex-start; }
+}
+
+/* Sectors below lg: a simple wrapping tab bar replaces the stacked columns; only the chosen sector's panel shows */
+.sector-tabbar { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 0 0 1.25rem; }
+.sector-tabbar-btn { flex: 0 0 auto; border-radius: 999px; background: rgb(var(--sand)); padding: .65rem 1.15rem; font-size: .875rem; font-weight: 600; color: rgb(var(--ink-900)); white-space: nowrap; transition: background .2s ease, color .2s ease; }
+.sector-tabbar-btn[aria-selected="true"] { background: rgb(var(--ink-900)); color: #fff; }
+.sector-tabbar-btn:focus-visible { outline: 3px solid rgb(var(--accent) / .45); outline-offset: 2px; }
+@media (max-width: 1023px) {
+  .sector:not(.is-active) { display: none; }
+  .sector-tabbar { margin-top: 2.5rem; }
+  .sector-tabbar + .sectors { margin-top: 0; }
+  .sector.is-active .sector-panel { animation: sector-in .35s ease both; }
+}
+@media (min-width: 1024px) { .sector-tabbar { display: none; } }
+/* Home hero highlight: light blue into soft violet gradient text, with a dark shadow to keep it crisp over the bright frames */
+.hero-accent { color: rgb(var(--accent-light)); background: linear-gradient(90deg, rgb(var(--accent-light)), #C9A2FF);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 12px rgb(var(--ink-950) / .5)); }
+/* Statement key phrases: accent blue even without animations (the scroll fill takes over when GSAP runs) */
+[data-fill] [data-key] { color: rgb(var(--accent)); }

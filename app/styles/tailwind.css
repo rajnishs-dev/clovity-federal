@@ -1,0 +1,4 @@
+/* Loaded after site.css, as the Tailwind CDN did (it appended its styles to the end of <head>) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
