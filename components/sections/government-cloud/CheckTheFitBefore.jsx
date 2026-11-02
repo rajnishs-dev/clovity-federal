@@ -8,11 +8,11 @@ export default function CheckTheFitBefore() {
       <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift ">
           <Image
-            src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80"
-            alt="Server racks with network cabling"
+            src="/assets/img/gov-cloud/check-commit.jpg"
+            alt="Team reviewing plans on laptops and tablets in a meeting room"
             className="aspect-[4/3] w-full object-cover"
             width={1200}
-            height={673}
+            height={800}
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>

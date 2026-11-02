@@ -8,8 +8,8 @@ export default function TakeCommandOfYour() {
       <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift ">
           <Image
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
-            alt="Team planning work on a whiteboard with sticky notes"
+            src="/assets/img/atlassian-solution/operations-command.jpg"
+            alt="Professional organizing project notes on a glass planning board"
             className="aspect-[4/3] w-full object-cover"
             width={1200}
             height={800}

@@ -8,11 +8,11 @@ export default function DataCenterEndsIn() {
       <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift lg:order-2">
           <Image
-            src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1200&q=80"
-            alt="IT staff with laptops in a server room"
+            src="/assets/img/gov-cloud/dc-ends.jpg"
+            alt="Professional standing in a data center aisle between server racks"
             className="aspect-[4/3] w-full object-cover"
             width={1200}
-            height={801}
+            height={800}
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>

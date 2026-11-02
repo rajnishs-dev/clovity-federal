@@ -25,57 +25,57 @@ export default function SixPilotsWorthRunning() {
           <div className="flex flex-col items-center gap-6 lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:flex-row lg:self-center">
             <div className="ws-media">
               <Image
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1600&q=80"
-                alt="IT professionals with laptops in a server room"
+                src="/assets/img/ai-solution/faster-service-delivery-it.jpg"
+                alt="IT staff reviewing a laptop together in a server room"
                 className="ws-img is-active"
+                crossOrigin="anonymous"
+                width={1600}
+                height={1067}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              />{' '}
+              <Image
+                src="/assets/img/ai-solution/centralized-delivery.jpg"
+                alt="Team working together around a shared computer"
+                className="ws-img"
+                crossOrigin="anonymous"
+                width={1600}
+                height={1031}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              />{' '}
+              <Image
+                src="/assets/img/ai-solution/improved-visibility.jpg"
+                alt="Analyst reviewing a reporting dashboard on a monitor"
+                className="ws-img"
+                crossOrigin="anonymous"
+                width={1600}
+                height={1067}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              />{' '}
+              <Image
+                src="/assets/img/ai-solution/standardized-workflows.jpg"
+                alt="Professional managing digital files next to an hourglass"
+                className="ws-img"
+                crossOrigin="anonymous"
+                width={1600}
+                height={1067}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              />{' '}
+              <Image
+                src="/assets/img/ai-solution/better-collaboration.jpg"
+                alt="Two colleagues discussing notes and a tablet at a table"
+                className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1068}
                 sizes="(min-width: 1024px) 60vw, 100vw"
               />{' '}
               <Image
-                src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?auto=format&fit=crop&w=1600&q=80"
-                alt="Curved shelves inside a public library"
+                src="/assets/img/ai-solution/better-governance.jpg"
+                alt="Leadership team meeting in a conference room with monitors"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
-                height={1020}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-              />{' '}
-              <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80"
-                alt="Analytics dashboard on a laptop"
-                className="ws-img"
-                crossOrigin="anonymous"
-                width={1600}
-                height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-              />{' '}
-              <Image
-                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1600&q=80"
-                alt="A hand tracing a system diagram on a planning board"
-                className="ws-img"
-                crossOrigin="anonymous"
-                width={1600}
-                height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-              />{' '}
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80"
-                alt="A team collaborating around laptops"
-                className="ws-img"
-                crossOrigin="anonymous"
-                width={1600}
-                height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-              />{' '}
-              <Image
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
-                alt="Colleagues reviewing documents in a meeting"
-                className="ws-img"
-                crossOrigin="anonymous"
-                width={1600}
-                height={1067}
+                height={900}
                 sizes="(min-width: 1024px) 60vw, 100vw"
               />
               <canvas className="ws-canvas" aria-hidden="true" />

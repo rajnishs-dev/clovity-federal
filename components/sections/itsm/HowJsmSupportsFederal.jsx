@@ -94,11 +94,11 @@ export default function HowJsmSupportsFederal() {
             <div className="spot-frame">
               <div className="spot-panel is-active">
                 <Image
-                  src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-incidents.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={733}
+                  height={830}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
@@ -106,11 +106,11 @@ export default function HowJsmSupportsFederal() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-service-request.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={733}
+                  height={738}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
@@ -118,11 +118,11 @@ export default function HowJsmSupportsFederal() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-changes.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={733}
+                  height={738}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
@@ -130,11 +130,11 @@ export default function HowJsmSupportsFederal() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-asset-record.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={617}
+                  height={733}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
@@ -142,11 +142,11 @@ export default function HowJsmSupportsFederal() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-knowledge.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={701}
+                  height={1100}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
@@ -154,11 +154,11 @@ export default function HowJsmSupportsFederal() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/itsm/jsm-security-request.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
-                  height={734}
+                  height={619}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
