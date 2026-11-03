@@ -20,11 +20,11 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=75"
-                alt="Analytics dashboard on a laptop"
+                src="/assets/img/compliance/assess.jpg"
+                alt="Consultants reviewing documents against a screen"
                 className="h-44 w-full object-cover"
-                width={900}
-                height={600}
+                width={1200}
+                height={800}
                 sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
               />
             </div>
@@ -53,11 +53,11 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=75"
-                alt="Team planning around a table"
+                src="/assets/img/compliance/architect.jpg"
+                alt="Engineer at a workstation in a data center"
                 className="h-44 w-full object-cover"
-                width={900}
-                height={600}
+                width={1200}
+                height={800}
                 sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
               />
             </div>
@@ -86,11 +86,11 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=900&q=75"
-                alt="IT staff working in a server room"
+                src="/assets/img/compliance/operationalize.jpg"
+                alt="Team reviewing a dashboard on a monitor"
                 className="h-44 w-full object-cover"
-                width={900}
-                height={601}
+                width={1200}
+                height={633}
                 sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
               />
             </div>
@@ -119,11 +119,11 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=75"
-                alt="Team collaborating at laptops"
+                src="/assets/img/compliance/evolve.jpg"
+                alt="Two engineers reviewing code in a server room"
                 className="h-44 w-full object-cover"
-                width={900}
-                height={600}
+                width={1200}
+                height={675}
                 sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
               />
             </div>

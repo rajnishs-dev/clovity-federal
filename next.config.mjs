@@ -1,5 +1,9 @@
 import { PHASE_PRODUCTION_BUILD, PHASE_PRODUCTION_SERVER } from 'next/constants.js';
 
+// Blog images from Strapi: local uploads come from the CMS host itself, live uploads from its S3 bucket
+const cmsUrl = process.env.NEXT_PUBLIC_CMS_API_URL ? new URL(process.env.NEXT_PUBLIC_CMS_API_URL) : null;
+const cmsImagePatterns = cmsUrl ? [{ protocol: cmsUrl.protocol.replace(':', ''), hostname: cmsUrl.hostname, port: cmsUrl.port }] : [];
+
 /** @type {(phase: string) => import('next').NextConfig} */
 const nextConfig = phase => ({
   // `next build` / `next start` write to their own folder, so a build never overwrites the files a running `next dev` uses.
@@ -8,10 +12,11 @@ const nextConfig = phase => ({
   // The page scripts (lib/site-init.js) build DOM once per page; StrictMode's double effect run would duplicate it in dev
   reactStrictMode: false,
   images: {
-    formats: ['image/avif', 'image/webp'],
+    // WebP only: AVIF encoding put too much CPU load on the server
+    formats: ['image/webp'],
     remotePatterns: [
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: 'assets.mixkit.co' },
+      { protocol: 'https', hostname: 'clovity-website.s3.ap-south-1.amazonaws.com' },
+      ...cmsImagePatterns,
     ],
     minimumCacheTTL: 2678400,
   },

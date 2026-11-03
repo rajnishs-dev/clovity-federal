@@ -69,11 +69,11 @@ export default function MarketsWeServe() {
             <div className="spot-frame">
               <div className="spot-panel is-active">
                 <Image
-                  src="https://images.unsplash.com/photo-1617581629397-a72507c3de9e?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/home/federal-civilian.jpg"
                   className="spot-panel-img"
                   alt=""
-                  width={1100}
-                  height={732}
+                  width={1585}
+                  height={992}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
@@ -82,11 +82,11 @@ export default function MarketsWeServe() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/home/defense-atlassian.jpg"
                   className="spot-panel-img"
                   alt=""
-                  width={1100}
-                  height={617}
+                  width={1600}
+                  height={897}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
@@ -95,11 +95,11 @@ export default function MarketsWeServe() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1569511166187-97eb6e387e19?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/home/state-and-local.jpg"
                   className="spot-panel-img"
                   alt=""
-                  width={1100}
-                  height={701}
+                  width={1600}
+                  height={900}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
@@ -108,11 +108,11 @@ export default function MarketsWeServe() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1100&q=80"
+                  src="/assets/img/home/prime-contractor.jpg"
                   className="spot-panel-img"
                   alt=""
-                  width={1100}
-                  height={733}
+                  width={1600}
+                  height={1067}
                   sizes="(min-width: 1024px) 50vw, 100vw"
                 />
                 <p className="eyebrow text-accent-light">Market</p>

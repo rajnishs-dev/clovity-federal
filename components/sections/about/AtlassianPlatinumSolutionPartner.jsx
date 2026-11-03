@@ -4,14 +4,14 @@ import Icon from '@/components/ui/Icon';
 export default function AtlassianPlatinumSolutionPartner() {
   return (
     <section className="scroll-mt-24 bg-white py-16 lg:py-24">
-      <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
-        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift ">
+      <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
-            src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
-            alt="A team collaborating around laptops"
-            className="aspect-[4/3] w-full object-cover"
-            width={1200}
-            height={800}
+            src="/assets/img/about/atlassian-partner-office-team.jpg"
+            alt="Team working on Jira, Confluence, Bitbucket and Jira Service Management"
+            className="w-full object-cover"
+            width={1400}
+            height={788}
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>

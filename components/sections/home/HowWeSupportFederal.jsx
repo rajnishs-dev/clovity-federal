@@ -7,8 +7,8 @@ export default function HowWeSupportFederal() {
   return (
     <section id="about" className="relative overflow-hidden bg-sand py-16 lg:py-20">
       <div className="dot-grid absolute inset-y-0 right-0 w-1/2 opacity-60" />
-      <div className="relative mx-auto grid max-w-site items-center gap-16 px-4 sm:px-6 lg:grid-cols-2">
-        <div className="relative">
+      <div className="relative mx-auto grid max-w-site items-center gap-8 lg:gap-16 px-4 sm:px-6 lg:grid-cols-2">
+        <div className="relative mx-auto w-full max-w-[767px] lg:max-w-none">
           <Image
             src="/assets/img/home/modern-tech-office.jpg"
             alt="A modern open office with rows of staff working at laptops"

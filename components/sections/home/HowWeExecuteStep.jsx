@@ -17,10 +17,10 @@ export default function HowWeExecuteStep() {
         <div className="bento mt-12 lg:mt-14">
           <article className="bento-card lg:col-span-7" tabIndex="0">
             <Image
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80"
-              alt="Two people reviewing handwritten notes beside laptops"
-              width={1400}
-              height={934}
+              src="/assets/img/compliance/assess.jpg"
+              alt="Consultants reviewing documents against a screen"
+              width={1200}
+              height={800}
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
             <div className="bento-shade" aria-hidden="true" />
@@ -49,10 +49,10 @@ export default function HowWeExecuteStep() {
           </article>
           <article className="bento-card lg:col-span-5" tabIndex="0">
             <Image
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1100&q=80"
-              alt="A hand tracing a system diagram on a planning board"
-              width={1100}
-              height={733}
+              src="/assets/img/compliance/architect.jpg"
+              alt="Engineer at a workstation in a data center"
+              width={1200}
+              height={800}
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
             <div className="bento-shade" aria-hidden="true" />
@@ -81,10 +81,10 @@ export default function HowWeExecuteStep() {
           </article>
           <article className="bento-card lg:col-span-5" tabIndex="0">
             <Image
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1100&q=80"
-              alt="Engineers working at their desks with laptops and monitors"
-              width={1100}
-              height={733}
+              src="/assets/img/compliance/operationalize.jpg"
+              alt="Team reviewing a dashboard on a monitor"
+              width={1200}
+              height={633}
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
             <div className="bento-shade" aria-hidden="true" />
@@ -113,10 +113,10 @@ export default function HowWeExecuteStep() {
           </article>
           <article className="bento-card lg:col-span-7" tabIndex="0">
             <Image
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1400&q=80"
-              alt="A laptop showing an analytics dashboard"
-              width={1400}
-              height={997}
+              src="/assets/img/compliance/evolve.jpg"
+              alt="Two engineers reviewing code in a server room"
+              width={1200}
+              height={675}
               sizes="(min-width: 1024px) 50vw, 100vw"
             />
             <div className="bento-shade" aria-hidden="true" />

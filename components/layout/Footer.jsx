@@ -101,17 +101,6 @@ export default function Footer() {
           <p>
             &copy; <span id="year">2026</span> Clovity, Inc. All rights reserved.
           </p>
-          <div className="flex gap-5">
-            <a href="#" className="hover:text-white">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-white">
-              Accessibility
-            </a>
-            <a href="#" className="hover:text-white">
-              Terms
-            </a>
-          </div>
         </div>
       </div>
       {/* Decorative wordmark: letters rise in as the footer scrolls into view (lib/animations.js) */}

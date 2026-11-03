@@ -116,7 +116,7 @@ footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
 @media (prefers-reduced-motion: reduce) { .m-panel, .m-panel nav, .m-overlay { transition: none !important; } }
 
 /* Shared section bits */
-.eyebrow { font-size: .875rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; }
+.eyebrow { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .18em; }
 .icon-tile { display: grid; place-items: center; width: 3.75rem; height: 3.75rem; border-radius: .9rem; background: rgb(var(--accent-50)); color: rgb(var(--ink-900)); }
 .icon-tile-sm { width: 3.25rem; height: 3.25rem; flex-shrink: 0; }
 
@@ -498,3 +498,16 @@ li > svg.cf-icon.h-5.w-5[data-icon="circle-alert"] { width: 1.75rem; height: 1.7
   filter: drop-shadow(0 2px 12px rgb(var(--ink-950) / .5)); }
 /* Statement key phrases: accent blue even without animations (the scroll fill takes over when GSAP runs) */
 [data-fill] [data-key] { color: rgb(var(--accent)); }
+/* Blog post body (/blog/[slug]): the editor's HTML from Strapi, styled here because it carries no classes */
+.article-body { color: #000; font-size: 1.125rem; line-height: 1.75; }
+.article-body > * + * { margin-top: 1.25rem; }
+.article-body h1, .article-body h2 { margin-top: 2.5rem; font-size: 1.75rem; line-height: 1.25; font-weight: 500; letter-spacing: -.01em; }
+.article-body h3, .article-body h4 { margin-top: 2rem; font-size: 1.375rem; line-height: 1.3; font-weight: 500; }
+.article-body a { color: rgb(var(--accent)); text-decoration: underline; text-underline-offset: 2px; }
+.article-body ul { list-style: disc; padding-left: 1.5rem; }
+.article-body ol { list-style: decimal; padding-left: 1.5rem; }
+.article-body li + li { margin-top: .5rem; }
+.article-body img { max-width: 100%; height: auto; border-radius: .5rem; }
+.article-body blockquote { border-left: 3px solid rgb(var(--accent)); padding-left: 1.25rem; font-style: italic; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 1rem; }
+.article-body th, .article-body td { border: 1px solid rgb(var(--ink-900) / .15); padding: .5rem .75rem; text-align: left; }

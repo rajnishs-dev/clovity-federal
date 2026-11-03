@@ -58,11 +58,11 @@ export default function WhereWeDeliverMeasurable() {
           </div>
         </div>
         <div className="mt-14">
-          <div data-panel="itsm" className="grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="itsm" className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/home/team-itsm.jpg"
               alt="IT professionals with laptops in a server room"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -98,11 +98,11 @@ export default function WhereWeDeliverMeasurable() {
               </Link>
             </div>
           </div>
-          <div data-panel="cloud" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="cloud" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/home/cloud-upgrades.jpg"
               alt="Server racks with network cabling"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -141,11 +141,11 @@ export default function WhereWeDeliverMeasurable() {
               </Link>
             </div>
           </div>
-          <div data-panel="devsecops" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="devsecops" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/home/devsecops-home.jpg"
               alt="Analytics dashboard on a laptop screen"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1600}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -184,11 +184,11 @@ export default function WhereWeDeliverMeasurable() {
               </Link>
             </div>
           </div>
-          <div data-panel="agility" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="agility" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/home/organization-agility.jpg"
               alt="Colleagues planning work in a meeting"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1600}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -225,11 +225,11 @@ export default function WhereWeDeliverMeasurable() {
               </Link>
             </div>
           </div>
-          <div data-panel="admin" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="admin" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/home/platform-admin.jpg"
               alt="Team collaborating at laptops"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1600}
               sizes="(min-width: 1024px) 50vw, 100vw"

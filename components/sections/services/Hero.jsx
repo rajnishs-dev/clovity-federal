@@ -8,9 +8,9 @@ export default function Hero() {
         muted
         loop
         playsInline
-        poster="https://assets.mixkit.co/videos/4809/4809-thumb-720-0.jpg"
+        poster="/assets/videos/services-hero.jpg"
       >
-        <source src="https://assets.mixkit.co/videos/4809/4809-1080.mp4" type="video/mp4" />
+        <source src="/assets/videos/services-hero.mp4" type="video/mp4" />
       </video>
       <div className="page-hero-overlay absolute inset-0 -z-10" />
       <div className="mx-auto w-full max-w-site px-4 sm:px-6">

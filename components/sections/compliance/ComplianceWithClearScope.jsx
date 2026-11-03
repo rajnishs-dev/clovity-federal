@@ -5,14 +5,14 @@ import Icon from '@/components/ui/Icon';
 export default function ComplianceWithClearScope() {
   return (
     <section className="scroll-mt-24 bg-white py-16 lg:py-24">
-      <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
-        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift ">
+      <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
-            src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
-            alt="Abstract digital security graphic"
-            className="aspect-[4/3] w-full object-cover"
-            width={1200}
-            height={801}
+            src="/assets/img/compliance/compliance-scope.jpg"
+            alt="An engineer with an ID lanyard checking a laptop in front of server racks"
+            className="h-auto w-full object-cover"
+            width={1080}
+            height={800}
             sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>

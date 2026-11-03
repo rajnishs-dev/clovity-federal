@@ -36,22 +36,17 @@ const MENUS = [
     ],
   },
   { label: 'Compliance', href: '/compliance' },
-  {
-    label: 'Resources',
-    width: 'w-80',
-    dropdown: 'dropdown ',
-    paths: ['/blog'],
-    items: [{ href: '/blog', icon: 'newspaper', title: 'Blog', text: 'Guides, checklists and articles' }],
-  },
+  { label: 'Blog', href: '/blog' },
   { label: 'About Us', href: '/about' },
 ];
 
-// Pages without a dark hero start with the solid header
+// Pages without a dark hero start with the solid header (blog posts: any /blog/<slug>)
 const SOLID_PAGES = ['/contact'];
+const SOLID_PREFIXES = ['/blog/'];
 
 export default function Header() {
   const pathname = usePathname();
-  const solid = SOLID_PAGES.includes(pathname);
+  const solid = SOLID_PAGES.includes(pathname) || SOLID_PREFIXES.some(prefix => pathname.startsWith(prefix));
   const [scrolled, setScrolled] = useState(false);
   const [hash, setHash] = useState('');
   const [ready, setReady] = useState(false);
@@ -143,7 +138,8 @@ export default function Header() {
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {MENUS.map(menu => {
-            const active = menu.href ? pathname === menu.href : menu.paths.includes(pathname);
+            // A plain link stays active on its sub-pages too (Blog on /blog/<slug>)
+            const active = menu.href ? pathname === menu.href || pathname.startsWith(`${menu.href}/`) : menu.paths.includes(pathname);
             const navClass = `nav-link ${active ? 'is-active' : ''}`;
             if (menu.href) {
               return (

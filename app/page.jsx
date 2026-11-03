@@ -12,6 +12,10 @@ import Gains from '@/components/sections/home/Gains';
 import ComplianceWithClearScope from '@/components/sections/home/ComplianceWithClearScope';
 import FederalResourcesForYour from '@/components/sections/home/FederalResourcesForYour';
 import CtaBanner from '@/components/sections/shared/CtaBanner';
+import { getFederalBlogs } from '@/lib/cms';
+
+// The resources section shows the newest posts from Strapi; a new post shows up within a minute
+export const revalidate = 60;
 
 export const metadata = {
   title: 'Clovity Federal | Atlassian for Secure Government Environments',
@@ -19,7 +23,8 @@ export const metadata = {
     'Clovity Federal, the public sector practice of Atlassian Platinum Solution Partner Clovity, configures, migrates and documents Jira, Confluence and Jira Service Management for government, including FedRAMP Moderate Atlassian Government Cloud.',
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const posts = (await getFederalBlogs()) || [];
   return (
     <>
       <PageScripts />
@@ -35,7 +40,7 @@ export default function HomePage() {
         <AtlassianSolutionsByGovernment />
         <Gains />
         <ComplianceWithClearScope />
-        <FederalResourcesForYour />
+        <FederalResourcesForYour posts={posts.slice(0, 3).map(({ content, ...card }) => card)} />
         <CtaBanner title="Let's talk about your mission." tall>
           Talk to a federal Atlassian solutions expert about deployment, migration, security configuration or modernization. Bring your
           security lead. We'll review where you stand and lay out practical next steps.

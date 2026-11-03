@@ -1,4 +1,3 @@
-import { preconnect } from 'react-dom';
 import { Manrope } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -17,8 +16,6 @@ export const metadata = {
 export const viewport = { width: 'device-width', initialScale: 1 };
 
 export default function RootLayout({ children }) {
-  // Most hero videos and their posters come from Mixkit; open that connection before the page asks for them
-  preconnect('https://assets.mixkit.co');
   return (
     <html lang="en" className={manrope.variable}>
       <body className="bg-white font-sans text-ink-900">

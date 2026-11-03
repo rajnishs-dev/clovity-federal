@@ -52,11 +52,11 @@ export default function HardenedConfigurationsControlBy() {
           </div>
         </div>
         <div className="mt-14">
-          <div data-panel="ac" className="grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="ac" className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/compliance/access-control.jpg"
               alt="People at a laptop with a digital overlay of user icons and highlighted groups"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -87,11 +87,11 @@ export default function HardenedConfigurationsControlBy() {
               </ul>
             </div>
           </div>
-          <div data-panel="au" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="au" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/compliance/au-audit.jpg"
               alt="Two people reviewing printed charts and reports at a desk"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -120,11 +120,11 @@ export default function HardenedConfigurationsControlBy() {
               </ul>
             </div>
           </div>
-          <div data-panel="cm" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="cm" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/compliance/cm-configuration.jpg"
               alt="A person at a laptop with a project timeline overlay showing staged changes"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1000}
               sizes="(min-width: 1024px) 50vw, 100vw"
@@ -155,11 +155,11 @@ export default function HardenedConfigurationsControlBy() {
               </ul>
             </div>
           </div>
-          <div data-panel="ia" className="hidden grid items-center gap-12 lg:grid-cols-2">
+          <div data-panel="ia" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
               src="/assets/img/compliance/ia-identity.jpg"
               alt="A person signing in on a phone login screen"
-              className="aspect-[4/3] w-full rounded-lg object-cover shadow-lift"
+              className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1068}
               sizes="(min-width: 1024px) 50vw, 100vw"

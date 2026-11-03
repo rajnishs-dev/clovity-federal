@@ -4,8 +4,8 @@ import Icon from '@/components/ui/Icon';
 export default function BuildFasterScaleSmarter() {
   return (
     <section className="scroll-mt-24 bg-white py-16 lg:py-24">
-      <div className="mx-auto grid max-w-site items-center gap-14 px-4 sm:px-6 lg:grid-cols-2">
-        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift ">
+      <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
+        <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
             src="/assets/img/ai-solution/build-faster-ai.jpg"
             alt="Business professional holding a performance gauge and an AI chip"
