@@ -7,8 +7,8 @@ const cmsImagePatterns = cmsUrl ? [{ protocol: cmsUrl.protocol.replace(':', ''),
 /** @type {(phase: string) => import('next').NextConfig} */
 const nextConfig = phase => ({
   // `next build` / `next start` write to their own folder, so a build never overwrites the files a running `next dev` uses.
-  // Hosts that expect the default folder (Vercel) keep `.next`.
-  distDir: [PHASE_PRODUCTION_BUILD, PHASE_PRODUCTION_SERVER].includes(phase) && !process.env.VERCEL ? '.next-build' : '.next',
+  // Hosts that expect the default folder (Vercel, Netlify) keep `.next`.
+  distDir: [PHASE_PRODUCTION_BUILD, PHASE_PRODUCTION_SERVER].includes(phase) && !process.env.VERCEL && !process.env.NETLIFY ? '.next-build' : '.next',
   // The page scripts (lib/site-init.js) build DOM once per page; StrictMode's double effect run would duplicate it in dev
   reactStrictMode: false,
   images: {
