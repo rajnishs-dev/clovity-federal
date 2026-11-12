@@ -211,7 +211,11 @@ export default function Header() {
         <nav className="mx-auto flex max-w-site flex-col px-4 py-4 sm:px-6" aria-label="Mobile">
           {MENUS.map(menu =>
             menu.href ? (
-              <Link key={menu.label} href={menu.href} className="m-link">
+              <Link
+                key={menu.label}
+                href={menu.href}
+                className={`m-link${pathname === menu.href || pathname.startsWith(`${menu.href}/`) ? ' is-current' : ''}`}
+              >
                 {menu.label}
               </Link>
             ) : (
@@ -224,7 +228,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`block py-2 text-black${isCurrent(item.href, menu.items) ? ' is-current' : ''}`}
+                      className={`block py-2${isCurrent(item.href, menu.items) ? ' is-current' : ''}`}
                       onClick={onLink(item.href)}
                       {...current(item.href, menu.items)}
                     >

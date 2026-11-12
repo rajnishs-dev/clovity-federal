@@ -49,7 +49,7 @@ export default function HowWeExecuteStep() {
           </article>
           <article className="bento-card lg:col-span-5" tabIndex="0">
             <Image
-              src="/assets/img/compliance/architect.jpg"
+              src="/assets/img/compliance/architect2.jpg"
               alt="Engineer at a workstation in a data center"
               width={1200}
               height={800}
@@ -113,7 +113,7 @@ export default function HowWeExecuteStep() {
           </article>
           <article className="bento-card lg:col-span-7" tabIndex="0">
             <Image
-              src="/assets/img/compliance/evolve.jpg"
+              src="/assets/img/compliance/evolve2.jpg"
               alt="Two engineers reviewing code in a server room"
               width={1200}
               height={675}

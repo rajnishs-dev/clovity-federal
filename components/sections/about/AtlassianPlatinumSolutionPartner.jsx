@@ -7,7 +7,7 @@ export default function AtlassianPlatinumSolutionPartner() {
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
-            src="/assets/img/about/atlassian-partner-office-team.jpg"
+            src="/assets/img/about/atlassian-partner-office-team2.jpg"
             alt="Team working on Jira, Confluence, Bitbucket and Jira Service Management"
             className="w-full object-cover"
             width={1400}

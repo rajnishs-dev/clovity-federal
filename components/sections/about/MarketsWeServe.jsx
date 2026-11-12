@@ -69,7 +69,7 @@ export default function MarketsWeServe() {
             <div className="spot-frame">
               <div className="spot-panel is-active">
                 <Image
-                  src="/assets/img/home/federal-civilian.jpg"
+                  src="/assets/img/home/federal-civilian2.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1585}

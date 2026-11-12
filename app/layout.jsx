@@ -1,12 +1,20 @@
-import { Manrope } from 'next/font/google';
+import localFont from 'next/font/local';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 // Same order as the static site: site.css first, Tailwind after it
 import './styles/site.css';
 import './styles/tailwind.css';
 
-// Self-hosted Manrope (same weights the Google Fonts link loaded), so text renders without a blocking font request
-const manrope = Manrope({ subsets: ['latin'], weight: ['400', '500', '600', '700'], display: 'swap', variable: '--font-manrope' });
+// Manrope from a file in the repo (Google Fonts, latin subset, variable weight). next/font/google downloads the font at
+// build time and quietly falls back to Arial when that download fails, so the file is kept locally instead.
+const manrope = localFont({
+  src: './fonts/Manrope-latin-variable.woff2',
+  weight: '400 700',
+  style: 'normal',
+  display: 'swap',
+  variable: '--font-manrope',
+  fallback: ['system-ui', 'sans-serif'],
+});
 
 export const metadata = {
   title: 'Clovity Federal',

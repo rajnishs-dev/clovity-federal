@@ -53,7 +53,7 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/assets/img/compliance/architect.jpg"
+                src="/assets/img/compliance/architect2.jpg"
                 alt="Engineer at a workstation in a data center"
                 className="h-44 w-full object-cover"
                 width={1200}
@@ -119,7 +119,7 @@ export default function HowWeSupportYour() {
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
               <Image
-                src="/assets/img/compliance/evolve.jpg"
+                src="/assets/img/compliance/evolve2.jpg"
                 alt="Two engineers reviewing code in a server room"
                 className="h-44 w-full object-cover"
                 width={1200}

@@ -7,7 +7,7 @@ export default function ImplementationIntegrationAndDevsecops() {
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none lg:order-2">
           <Image
-            src="/assets/img/services/devsecops-implementation.jpg"
+            src="/assets/img/services/devsecops-implementation2.jpg"
             alt="A desk with a monitor showing the DevSecOps loop, below Jira, Confluence, Jira Service Management and Bitbucket logos"
             className="h-auto w-full object-cover"
             width={1080}

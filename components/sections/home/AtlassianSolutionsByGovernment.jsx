@@ -76,7 +76,7 @@ export default function AtlassianSolutionsByGovernment() {
                   </div>
                 </div>
                 <Image
-                  src="/assets/img/home/federal-civilian.jpg"
+                  src="/assets/img/home/federal-civilian2.jpg"
                   alt="An analyst reviewing a security dashboard on a tablet in front of server racks"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1585}

@@ -15,7 +15,7 @@ export default function FederalResourcesToShare() {
         </div>
         {/* Editorial rows: rules draw in and content rises on scroll (animations.js [data-rows]) */}
         <div data-rows="" className="rows mt-12 lg:mt-16">
-          <Link href="/contact" className="row-item group">
+          <div className="row-item">
             <span className="row-icon">
               <Icon name="workflow" className="h-6 w-6" />
             </span>
@@ -29,12 +29,9 @@ export default function FederalResourcesToShare() {
               <p className="text-lg leading-relaxed text-black">
                 How Jira, Confluence and Jira Service Management connect intake, approvals and records, with an audit trail at each step.
               </p>
-              <span className="card-link mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">
-                Request the one-pager <Icon name="arrow-right" className="arrow h-4 w-4" />
-              </span>
             </div>
-          </Link>{' '}
-          <Link href="/contact" className="row-item group">
+          </div>
+          <div className="row-item">
             <span className="row-icon">
               <Icon name="headset" className="h-6 w-6" />
             </span>
@@ -48,12 +45,9 @@ export default function FederalResourcesToShare() {
               <p className="text-lg leading-relaxed text-black">
                 Managed administration, access reviews and release tracking for teams without a full-time Atlassian admin.
               </p>
-              <span className="card-link mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">
-                Request the one-pager <Icon name="arrow-right" className="arrow h-4 w-4" />
-              </span>
             </div>
-          </Link>{' '}
-          <Link href="/contact" className="row-item group">
+          </div>
+          <div className="row-item">
             <span className="row-icon">
               <Icon name="sparkles" className="h-6 w-6" />
             </span>
@@ -65,10 +59,15 @@ export default function FederalResourcesToShare() {
               <p className="text-lg leading-relaxed text-black">
                 The checks we run before any AI feature is switched on, and the pilots we start with once it is approved.
               </p>
-              <span className="card-link mt-4 inline-flex items-center gap-2 text-sm font-semibold text-ink-900 group-hover:text-accent">
-                Request the one-pager <Icon name="arrow-right" className="arrow h-4 w-4" />
-              </span>
             </div>
+          </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-btn px-7 py-4 font-semibold text-white hover:bg-btn-dark"
+          >
+            Request a one-pager <Icon name="arrow-right" className="h-5 w-5" />
           </Link>
         </div>
       </div>

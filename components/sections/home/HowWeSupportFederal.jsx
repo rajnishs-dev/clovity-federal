@@ -10,7 +10,7 @@ export default function HowWeSupportFederal() {
       <div className="relative mx-auto grid max-w-site items-center gap-8 lg:gap-16 px-4 sm:px-6 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-[767px] lg:max-w-none">
           <Image
-            src="/assets/img/home/modern-tech-office.jpg"
+            src="/assets/img/home/modern-tech-office2.jpg"
             alt="A modern open office with rows of staff working at laptops"
             className="aspect-[4/5] w-full rounded-lg object-cover shadow-lift sm:aspect-[5/5]"
             width={1536}

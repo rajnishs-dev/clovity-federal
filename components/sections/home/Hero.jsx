@@ -4,7 +4,7 @@ import { optimizedImage } from '@/lib/media';
 // HERO with background video
 export default function Hero() {
   return (
-    <section className="relative isolate flex h-screen sm:min-h-[600px] items-center overflow-hidden bg-ink-950">
+    <section className="relative isolate flex h-screen sm:min-h-[600px] items-center overflow-hidden bg-black">
       {/* Background video: Clovity-supplied banner video */}
       <video
         id="hero-video"

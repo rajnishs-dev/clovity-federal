@@ -1,7 +1,7 @@
 // Page hero: background video (Mixkit free license)
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[640px] items-center overflow-hidden bg-ink-950 pb-20 pt-28 lg:h-[78vh]">
+    <section className="relative isolate flex min-h-[640px] items-center overflow-hidden bg-black pb-20 pt-28 lg:h-[78vh]">
       <video
         className="absolute inset-0 -z-20 h-full w-full object-cover"
         autoPlay

@@ -107,21 +107,6 @@ export default function FederalProcurementPartnership() {
             </p>
           </div>
         </div>
-        <div className="mt-10 flex flex-col items-center justify-between gap-6 rounded-lg bg-ink-900 p-6 text-white sm:flex-row sm:p-10">
-          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
-            <Icon name="file-search" className="h-8 w-8 shrink-0 text-accent-light" />
-            <p className="text-lg">
-              Need to confirm contract vehicles, UEI or CAGE details?{' '}
-              <span className="text-white/65">We'll send current company data and contract-vehicle details on request.</span>
-            </p>
-          </div>
-          <a
-            href="#contact-form"
-            className="shrink-0 rounded-full bg-white px-6 py-3 font-semibold text-ink-900 hover:bg-btn hover:text-white"
-          >
-            Request details
-          </a>
-        </div>
       </div>
     </section>
   );
