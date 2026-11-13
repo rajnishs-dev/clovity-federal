@@ -8,7 +8,7 @@ export default function DataCenterEndsIn() {
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none lg:order-2">
           <Image
-            src="/assets/img/gov-cloud/dc-ends.jpg"
+            src="/assets/img/gov-cloud/dc-ends2.jpg"
             alt="Professional standing in a data center aisle between server racks"
             className="aspect-[4/3] w-full object-cover"
             width={1200}

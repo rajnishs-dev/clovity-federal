@@ -21,7 +21,7 @@ export default function ComplianceWithClearScope() {
           </div>
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3">
             <div className="rounded-lg bg-white p-6 shadow-lift">
-              <Icon name="shield-check" className="h-7 w-7 text-ink-900" />
+              <Icon name="landmark" className="h-7 w-7 text-ink-900" />
               <h3 className="text-black text-xl mt-4 font-medium">FedRAMP Moderate</h3>
               <p className="mt-1 text-sm text-black">Through Atlassian Government Cloud only, for Jira, Confluence and JSM.</p>
             </div>

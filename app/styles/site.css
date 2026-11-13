@@ -34,7 +34,13 @@ body { -webkit-font-smoothing: antialiased; overflow-x: clip; }
 /* Hero video: real footage, slightly muted so text stays readable */
 .hero-video { filter: saturate(.95) brightness(1.08); }
 /* Banner overlays: light black, a little darker at the left edge where the headline sits so white text reads over the video */
-.hero-overlay, .page-hero-overlay { background: linear-gradient(100deg, rgb(0 0 0 / .50) 0%, rgb(0 0 0 / .30) 50%, rgb(0 0 0 / .35) 100%); }
+.hero-overlay { background: linear-gradient(100deg, rgb(0 0 0 / .50) 0%, rgb(0 0 0 / .30) 50%, rgb(0 0 0 / .35) 100%); }
+/* Inner-page banner scrim (PageBanner), same as the main Clovity website: darker on phones, where the copy covers more of the photo */
+/* Dark behind the copy on the left, fading to fully clear towards the right so the photo shows through */
+.page-banner-overlay { background: linear-gradient(90deg, rgba(10, 12, 20, .95) 0%, rgba(10, 12, 20, .65) 50%, rgba(10, 12, 20, 0) 100%); }
+@media (min-width: 640px) {
+  .page-banner-overlay { background: linear-gradient(90deg, rgba(10, 12, 20, .85) 0%, rgba(10, 12, 20, .55) 40%, rgba(10, 12, 20, 0) 75%); }
+}
 
 
 /* Subtle dotted grid used on light sections */
@@ -62,7 +68,6 @@ footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
 #site-header.is-scrolled .logo-dark { display: block; }
 #site-header.is-scrolled .header-cta-ghost { color: rgb(var(--ink-900)); border-color: rgb(var(--ink-900) / .2); }
 #site-header.is-scrolled .menu-btn { color: rgb(var(--ink-900)); }
-
 /* Primary navigation, coloured like the main Clovity site (website-t Navbar):
    white over the dark hero, ink #0f172a once solid with a #1d4ed8 hover; a #2563eb underline grows in on hover,
    and the current page is marked by the full underline only, with no colour change */
@@ -415,17 +420,19 @@ html.lenis, html.lenis body { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
 
-/* Brand line icons (icons.js): a constant 2.25px outline at any size, with one accent part in the icon's colour family
-   (data-tone, set by main.js from CF_ICON_TONES; blue when unlisted). Tiles holding a toned icon take that family's light tint. */
+/* Brand line icons (icons.js): a constant 2.25px outline at any size, black with one accent part.
+   Standalone icons all use one purple accent. Icons inside filled boxes (tiles, row circles, timeline dots, h-12 squares,
+   list bullets) keep the colour family main.js assigns them (data-tone; blue when unlisted). */
 .cf-icon * { stroke-width: 2.25px; vector-effect: non-scaling-stroke; }
-.cf-icon .a { stroke: rgb(var(--tone, var(--accent))); }
-.cf-icon .af { fill: rgb(var(--tone, var(--accent))); stroke: none; }
-.cf-icon[data-tone="teal"] { --tone: 13 148 136; }
-.cf-icon[data-tone="violet"] { --tone: 124 58 237; }
-.cf-icon[data-tone="amber"] { --tone: 217 119 6; }
-.cf-icon[data-tone="green"] { --tone: 22 163 74; }
-/* Icon tiles, row circles, timeline dots and the h-12 icon squares are solid in their icon's colour family with a white
-   glyph, like product logos. The family is read off the icon inside (:has) so the tile and glyph always match. */
+.cf-icon { --tone: 124 58 237; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12, li) > .cf-icon { --tone: var(--accent); }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12, li) > .cf-icon[data-tone="teal"] { --tone: 13 148 136; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12, li) > .cf-icon[data-tone="violet"] { --tone: 124 58 237; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12, li) > .cf-icon[data-tone="amber"] { --tone: 217 119 6; }
+:is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12, li) > .cf-icon[data-tone="green"] { --tone: 22 163 74; }
+.cf-icon .a { stroke: rgb(var(--tone)); }
+.cf-icon .af { fill: rgb(var(--tone)); stroke: none; }
+/* The box itself takes the colour family of the icon inside (:has) so the box and glyph always match. */
 :is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="teal"]) { --tone: 13 148 136; }
 :is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="violet"]) { --tone: 124 58 237; }
 :is(.icon-tile, .row-icon, .tl-dot, span.grid.h-12):has(> .cf-icon[data-tone="amber"]) { --tone: 217 119 6; }

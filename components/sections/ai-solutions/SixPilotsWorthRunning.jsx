@@ -70,7 +70,7 @@ export default function SixPilotsWorthRunning() {
                 sizes="(min-width: 1024px) 60vw, 100vw"
               />{' '}
               <Image
-                src="/assets/img/ai-solution/better-governance.jpg"
+                src="/assets/img/ai-solution/better-governance2.jpg"
                 alt="Leadership team meeting in a conference room with monitors"
                 className="ws-img"
                 crossOrigin="anonymous"

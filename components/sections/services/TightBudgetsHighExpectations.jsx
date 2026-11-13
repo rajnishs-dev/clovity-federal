@@ -7,7 +7,7 @@ export default function TightBudgetsHighExpectations() {
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
-            src="/assets/img/services/managed-service-and-support.jpg"
+            src="/assets/img/services/managed-service-and-support2.jpg"
             alt="A team gathered around laptops at a meeting table"
             className="h-auto w-full object-cover"
             width={1080}

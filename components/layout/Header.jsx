@@ -40,13 +40,10 @@ const MENUS = [
   { label: 'About Us', href: '/about' },
 ];
 
-// Pages without a dark hero start with the solid header (blog posts: any /blog/<slug>)
-const SOLID_PAGES = ['/contact'];
-const SOLID_PREFIXES = ['/blog/'];
-
 export default function Header() {
   const pathname = usePathname();
-  const solid = SOLID_PAGES.includes(pathname) || SOLID_PREFIXES.some(prefix => pathname.startsWith(prefix));
+  // Only the home page starts with the see-through header over its video; every other page starts solid
+  const solid = pathname !== '/';
   const [scrolled, setScrolled] = useState(false);
   const [hash, setHash] = useState('');
   const [ready, setReady] = useState(false);

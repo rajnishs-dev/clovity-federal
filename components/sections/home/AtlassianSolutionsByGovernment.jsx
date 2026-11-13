@@ -282,7 +282,7 @@ export default function AtlassianSolutionsByGovernment() {
                   </div>
                 </div>
                 <Image
-                  src="/assets/img/home/prime-contractor.jpg"
+                  src="/assets/img/home/prime-contractor2.jpg"
                   alt="A team working together at computers"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1600}

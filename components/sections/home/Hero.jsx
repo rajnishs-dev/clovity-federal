@@ -1,4 +1,3 @@
-import Icon from '@/components/ui/Icon';
 import { optimizedImage } from '@/lib/media';
 
 // HERO with background video
@@ -35,13 +34,6 @@ export default function Hero() {
           </p>
         </div>
       </div>
-      <button
-        id="video-toggle"
-        className="absolute bottom-8 right-6 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/10 text-white backdrop-blur hover:bg-white/20"
-        aria-label="Pause background video"
-      >
-        <Icon name="pause" data-icon="pause" className="h-4 w-4" /> <Icon name="play" data-icon="play" className="hidden h-4 w-4" />
-      </button>
     </section>
   );
 }

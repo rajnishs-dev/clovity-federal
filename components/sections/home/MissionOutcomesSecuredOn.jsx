@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
 
@@ -29,7 +28,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/government-cloud"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/secure-collab.png" alt="" className="w-14" width={56} height={56} unoptimized />
+            <Icon name="shield-check" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">Secure collaboration</h3>
             <p className="mt-3 leading-relaxed text-black">
               Jira, Confluence and JSM on Atlassian Government Cloud, set up inside its FedRAMP Moderate boundary with hardened permissions.
@@ -42,7 +41,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/atlassian-solutions"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/mission-delivery.png" alt="" className="w-14" width={56} height={49} unoptimized />
+            <Icon name="git-branch" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">Mission delivery</h3>
             <p className="mt-3 leading-relaxed text-black">
               Jira and Bitbucket linked for DevSecOps, so requirements, code reviews and releases are traced from start to finish.
@@ -55,7 +54,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/itsm"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/operational-coordination.png" alt="" className="w-14" width={56} height={57} unoptimized />
+            <Icon name="headset" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">Operational coordination</h3>
             <p className="mt-3 leading-relaxed text-black">
               Jira Service Management desks with an approval trail for every change, incident and access request.
@@ -68,7 +67,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/services#professional"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/system-integration.png" alt="" className="w-14" width={56} height={55} unoptimized />
+            <Icon name="network" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">System integration</h3>
             <p className="mt-3 leading-relaxed text-black">
               Atlassian connected to your identity provider and mission tools, with each data flow reviewed before it goes live.
@@ -81,7 +80,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/atlassian-solutions"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/leadership-visibility.png" alt="" className="w-14" width={56} height={52} unoptimized />
+            <Icon name="eye" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">Leadership visibility</h3>
             <p className="mt-3 leading-relaxed text-black">
               Program and portfolio dashboards built on live Jira data, so leaders see status and risk without chasing spreadsheets.
@@ -94,7 +93,7 @@ export default function MissionOutcomesSecuredOn() {
             href="/ai-solutions"
             className="card-link group relative overflow-hidden rounded-lg bg-white p-6 sm:p-8 shadow-card transition hover:-translate-y-1 hover:shadow-lift"
           >
-            <Image src="/assets/img/icons/governed-ai.png" alt="" className="w-14" width={56} height={80} unoptimized />
+            <Icon name="sparkles" className="h-7 w-7 text-ink-900" />
             <h3 className="text-black mt-6 font-display text-xl font-medium">Governed AI</h3>
             <p className="mt-3 leading-relaxed text-black">
               AI features vary by deployment. We help you set data boundaries, usage rules and review steps before anything is switched on.

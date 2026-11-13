@@ -8,7 +8,7 @@ export default function ComplianceWithClearScope() {
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
           <Image
-            src="/assets/img/compliance/compliance-scope.jpg"
+            src="/assets/img/compliance/compliance-scope2.jpg"
             alt="An engineer with an ID lanyard checking a laptop in front of server racks"
             className="h-auto w-full object-cover"
             width={1080}

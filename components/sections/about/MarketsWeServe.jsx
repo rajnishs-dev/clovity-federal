@@ -108,7 +108,7 @@ export default function MarketsWeServe() {
               </div>
               <div className="spot-panel">
                 <Image
-                  src="/assets/img/home/prime-contractor.jpg"
+                  src="/assets/img/home/prime-contractor2.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1600}

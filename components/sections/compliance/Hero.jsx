@@ -1,18 +1,9 @@
-// Page hero: background video (Mixkit free license)
+import PageBanner from '@/components/ui/PageBanner';
+
+// Page hero: banner photo with the shared dark scrim
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[640px] items-center overflow-hidden bg-black pb-20 pt-28 lg:h-[78vh]">
-      <video
-        className="absolute inset-0 -z-20 h-full w-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/assets/videos/compliance-hero.jpg"
-      >
-        <source src="/assets/videos/compliance-hero.mp4" type="video/mp4" />
-      </video>
-      <div className="page-hero-overlay absolute inset-0 -z-10" />
+    <PageBanner image="compliance-banner" mobile={false}>
       <div className="mx-auto w-full max-w-site px-4 sm:px-6">
         <div className="max-w-3xl">
           <h1 className="font-display text-3xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl">
@@ -29,6 +20,6 @@ export default function Hero() {
           </p>
         </div>
       </div>
-    </section>
+    </PageBanner>
   );
 }

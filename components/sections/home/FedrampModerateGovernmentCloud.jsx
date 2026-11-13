@@ -37,9 +37,9 @@ export default function FedrampModerateGovernmentCloud() {
               muted
               loop
               playsInline
-              poster={optimizedImage('/assets/img/home/data-server-video-poster.jpg')}
+              poster={optimizedImage('/assets/img/home/data-server-video-poster2.jpg')}
             >
-              <source src="/assets/videos/data-servers.mp4" type="video/mp4" />
+              <source src="/assets/videos/data-servers2.mp4" type="video/mp4" />
             </video>
             <span className="absolute bottom-4 left-4 hidden rounded-full bg-white/90 sm:inline-block px-4 py-2 text-sm font-semibold text-ink-900">
               Run separately from Atlassian's commercial cloud

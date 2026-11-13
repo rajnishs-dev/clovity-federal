@@ -54,7 +54,7 @@ export default function HardenedConfigurationsControlBy() {
         <div className="mt-14">
           <div data-panel="ac" className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
-              src="/assets/img/compliance/access-control.jpg"
+              src="/assets/img/compliance/access-control2.jpg"
               alt="People at a laptop with a digital overlay of user icons and highlighted groups"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
