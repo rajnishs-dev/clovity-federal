@@ -16,7 +16,7 @@ export default function HowJsmSupportsFederal() {
           </p>
         </div>
         {/* Spotlight: the sticky panel swaps to the item at the middle of the screen (animations.js [data-spot]) */}
-        <div data-spot="" className="spot mt-12 lg:mt-16">
+        <div data-spot="" className="spot spot-soft mt-12 lg:mt-16">
           <div className="spot-list space-y-8 lg:space-y-0">
             <article className="spot-item">
               <span className="icon-tile icon-tile-sm">

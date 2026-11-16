@@ -60,7 +60,7 @@ export default function WhereWeDeliverMeasurable() {
         <div className="mt-14">
           <div data-panel="itsm" className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
-              src="/assets/img/home/team-itsm.jpg"
+              src="/assets/img/home/team-itsm2.jpg"
               alt="IT professionals with laptops in a server room"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
@@ -100,7 +100,7 @@ export default function WhereWeDeliverMeasurable() {
           </div>
           <div data-panel="cloud" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
-              src="/assets/img/home/cloud-upgrades2.jpg"
+              src="/assets/img/home/cloud-upgrades3.jpg"
               alt="Server racks with network cabling"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
@@ -143,7 +143,7 @@ export default function WhereWeDeliverMeasurable() {
           </div>
           <div data-panel="devsecops" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
-              src="/assets/img/home/devsecops-home2.jpg"
+              src="/assets/img/home/devsecops-home4.jpg"
               alt="Analytics dashboard on a laptop screen"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
@@ -227,7 +227,7 @@ export default function WhereWeDeliverMeasurable() {
           </div>
           <div data-panel="admin" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
             <Image
-              src="/assets/img/home/platform-admin2.jpg"
+              src="/assets/img/home/platform-admin3.jpg"
               alt="Team collaborating at laptops"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}

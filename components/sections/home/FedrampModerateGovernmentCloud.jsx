@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
-import { optimizedImage } from '@/lib/media';
 
 // Government Cloud
 export default function FedrampModerateGovernmentCloud() {
@@ -29,18 +29,15 @@ export default function FedrampModerateGovernmentCloud() {
           </Link>
         </div>
         <div className="lg:col-span-7">
-          {/* Mixkit free-license clip 23219: data center hallway */}
           <div className="relative mb-6 overflow-hidden rounded-lg shadow-lift">
-            <video
+            <Image
+              src="/assets/img/home/data-server.jpg"
+              alt="Rows of server racks in a brightly lit data center"
               className="aspect-[16/8] w-full object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={optimizedImage('/assets/img/home/data-server-video-poster2.jpg')}
-            >
-              <source src="/assets/videos/data-servers2.mp4" type="video/mp4" />
-            </video>
+              width={1600}
+              height={1066}
+              sizes="(min-width: 1024px) 58vw, 100vw"
+            />
             <span className="absolute bottom-4 left-4 hidden rounded-full bg-white/90 sm:inline-block px-4 py-2 text-sm font-semibold text-ink-900">
               Run separately from Atlassian's commercial cloud
             </span>

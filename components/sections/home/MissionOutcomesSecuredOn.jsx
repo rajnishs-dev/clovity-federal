@@ -18,7 +18,7 @@ export default function MissionOutcomesSecuredOn() {
           </div>
           <Link
             href="/services"
-            className="inline-flex shrink-0 self-start items-center lg:self-auto gap-2 rounded-full border border-ink-900/15 px-6 py-3 font-semibold hover:bg-ink-900 hover:text-white"
+            className="inline-flex shrink-0 self-start items-center lg:self-auto gap-2 rounded-full border border-ink-900/15 px-6 py-3 font-semibold hover:border-btn hover:bg-btn hover:text-white"
           >
             All services <Icon name="arrow-up-right" className="h-4 w-4" />
           </Link>

@@ -41,7 +41,7 @@ export default function OurLatestGuidesAnd({ posts = [] }) {
                     type="button"
                     aria-pressed={filter === f.category}
                     onClick={() => setFilter(f.category)}
-                    className={`rounded-full px-4 py-2 text-sm font-medium ${filter === f.category ? 'bg-ink-900 text-white' : 'bg-white shadow-card hover:bg-accent-50'}`}
+                    className={`rounded-full px-4 py-2 text-sm font-medium ${filter === f.category ? 'bg-btn text-white' : 'bg-white shadow-card hover:bg-accent-50'}`}
                   >
                     {f.label}
                   </button>

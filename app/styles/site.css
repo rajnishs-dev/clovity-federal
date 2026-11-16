@@ -134,7 +134,7 @@ footer { --ink-950: 3 24 46; --ink-900: 4 33 63; --steel-700: 22 52 88;
 .card-link:hover .arrow { transform: translateX(4px); }
 
 /* Tabs */
-.tab-btn[aria-selected="true"] { background: rgb(var(--ink-900)); color: #fff; }
+.tab-btn[aria-selected="true"] { background: rgb(var(--btn)); color: #fff; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -357,8 +357,8 @@ a.row-item:hover .arrow { transform: translateX(4px); }
 .carousel.is-ready .carousel-card.is-active { cursor: default; box-shadow: 0 2px 4px rgba(16,16,20,.05), 0 30px 60px -30px rgba(10,20,51,.35); }
 @media (min-width: 1024px) { .carousel { --cw: calc((100% - 3rem) / 3); --cgap: 1.5rem; } }
 /* Controls: filled navy arrows, dots that stretch into an accent bar for the active slide */
-.carousel-btn { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 999px; background: rgb(var(--ink-900)); color: #fff; transition: background .2s ease, transform .2s ease; }
-.carousel-btn:hover { background: rgb(var(--btn)); }
+.carousel-btn { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 999px; background: rgb(var(--btn)); color: #fff; transition: background .2s ease, transform .2s ease; }
+.carousel-btn:hover { background: rgb(var(--btn-dark)); }
 .carousel-btn:active { transform: scale(.94); }
 .carousel-btn:focus-visible, .carousel-dot:focus-visible { outline: 3px solid rgb(var(--accent) / .45); outline-offset: 3px; }
 .carousel-dot { width: .6rem; height: .6rem; border-radius: 999px; background: rgb(var(--ink-900) / .2); transition: width .35s ease, background .35s ease; }
@@ -409,6 +409,8 @@ a.row-item:hover .arrow { transform: translateX(4px); }
 .spot-panel:has(.spot-panel-img) { isolation: isolate; overflow: hidden; transform: none; }
 .spot-panel:has(.spot-panel-img)::before { content: ""; position: absolute; inset: 0; z-index: -1;
   background: linear-gradient(to top, rgb(0 0 0 / .75) 0%, rgb(0 0 0 / .45) 45%, rgb(0 0 0 / .15) 100%); }
+/* Lighter overlay variant (ITSM "How JSM supports federal ITSM"): keeps the bottom dark enough for the text, lets more of the photo show */
+.spot-soft .spot-panel:has(.spot-panel-img)::before { background: linear-gradient(to top, rgb(0 0 0 / .6) 0%, rgb(0 0 0 / .25) 45%, rgb(0 0 0 / 0) 100%); }
 .spot-panel-img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transform: scale(1.08); transition: transform 1.4s cubic-bezier(.22,.61,.36,1); }
 .spot-panel.is-active .spot-panel-img { transform: none; }
 .spot-panel:has(.spot-panel-img) > p { transform: translateY(16px); transition: transform .7s cubic-bezier(.22,.61,.36,1) .1s; }
@@ -494,7 +496,7 @@ li > svg.cf-icon.h-5.w-5[data-icon="circle-alert"] { width: 1.75rem; height: 1.7
 /* Sectors below lg: a simple wrapping tab bar replaces the stacked columns; only the chosen sector's panel shows */
 .sector-tabbar { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin: 0 0 1.25rem; }
 .sector-tabbar-btn { flex: 0 0 auto; border-radius: 999px; background: rgb(var(--sand)); padding: .65rem 1.15rem; font-size: .875rem; font-weight: 600; color: rgb(var(--ink-900)); white-space: nowrap; transition: background .2s ease, color .2s ease; }
-.sector-tabbar-btn[aria-selected="true"] { background: rgb(var(--ink-900)); color: #fff; }
+.sector-tabbar-btn[aria-selected="true"] { background: rgb(var(--btn)); color: #fff; }
 .sector-tabbar-btn:focus-visible { outline: 3px solid rgb(var(--accent) / .45); outline-offset: 2px; }
 @media (max-width: 1023px) {
   .sector:not(.is-active) { display: none; }

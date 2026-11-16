@@ -4,7 +4,7 @@ import AtlassianPlatinumSolutionPartner from '@/components/sections/about/Atlass
 import Statement from '@/components/sections/about/Statement';
 import WhyFederalAgenciesChoose from '@/components/sections/about/WhyFederalAgenciesChoose';
 import PhotoMosaic from '@/components/sections/about/PhotoMosaic';
-import MarketsWeServe from '@/components/sections/about/MarketsWeServe';
+import AboutFaq from '@/components/sections/about/AboutFaq';
 import CtaBanner from '@/components/sections/shared/CtaBanner';
 
 export const metadata = {
@@ -23,7 +23,7 @@ export default function AboutPage() {
         <Statement />
         <WhyFederalAgenciesChoose />
         <PhotoMosaic />
-        <MarketsWeServe />
+        <AboutFaq />
         <CtaBanner title="Let's talk about your mission." sand>
           Deployment, migration, process improvement or a security review on the way. Tell us your data, your impact level and your
           deadlines. We'll tell you what fits and what doesn't.
