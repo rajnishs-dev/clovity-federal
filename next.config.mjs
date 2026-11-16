@@ -20,9 +20,16 @@ const nextConfig = phase => ({
     ],
     minimumCacheTTL: 2678400,
   },
+  // Pages already opened or prefetched in this tab are reused on client navigation, without asking the server again.
+  // Static pages stay 30 minutes (Next's default is 5), dynamic ones 5 minutes (default 0).
+  experimental: {
+    staleTimes: { static: 1800, dynamic: 300 },
+  },
   async headers() {
-    // Images and videos in /public: cached for a day, then refreshed in the background (a replaced file still shows up)
-    return [{ source: '/assets/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=86400, stale-while-revalidate=604800' }] }];
+    // Images and videos in /public: the browser reuses its copy for 30 days, then shows it once more while fetching the new one.
+    // A file replaced under the same name can take up to 30 days to reach returning visitors, so give a new image a new
+    // name (team-itsm2.jpg -> team-itsm3.jpg) as the site already does.
+    return [{ source: '/assets/:path*', headers: [{ key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=31536000' }] }];
   },
 });
 

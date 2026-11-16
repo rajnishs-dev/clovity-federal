@@ -6,7 +6,8 @@
     "dev": "next dev -p 3003",
     "build": "next build",
     "start": "next start -p 3003",
-    "preview": "next build && next start -p 3003"
+    "preview": "next build && next start -p 3003",
+    "banner-blur": "node scripts/generate-banner-blur.mjs"
   },
   "dependencies": {
     "gsap": "3.12.5",
