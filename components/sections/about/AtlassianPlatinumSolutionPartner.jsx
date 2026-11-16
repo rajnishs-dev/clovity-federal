@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 export default function AtlassianPlatinumSolutionPartner() {
@@ -6,13 +5,14 @@ export default function AtlassianPlatinumSolutionPartner() {
     <section className="scroll-mt-24 bg-white py-16 lg:py-24">
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none ">
-          <Image
+          <img
             src="/assets/img/about/atlassian-partner-office-team2.jpg"
             alt="Team working on Jira, Confluence, Bitbucket and Jira Service Management"
             className="w-full object-cover"
             width={1400}
             height={788}
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div>

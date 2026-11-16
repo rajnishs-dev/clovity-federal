@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 export default function SixPilotsWorthRunning() {
   return (
@@ -24,59 +23,65 @@ export default function SixPilotsWorthRunning() {
           </div>
           <div className="flex flex-col items-center gap-6 lg:col-span-7 lg:col-start-6 lg:row-start-2 lg:flex-row lg:self-center">
             <div className="ws-media">
-              <Image
+              <img
                 src="/assets/img/ai-solution/faster-service-delivery-it.jpg"
                 alt="IT staff reviewing a laptop together in a server room"
                 className="ws-img is-active"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />{' '}
-              <Image
+              <img
                 src="/assets/img/ai-solution/centralized-delivery.jpg"
                 alt="Team working together around a shared computer"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1031}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />{' '}
-              <Image
+              <img
                 src="/assets/img/ai-solution/improved-visibility.jpg"
                 alt="Analyst reviewing a reporting dashboard on a monitor"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />{' '}
-              <Image
+              <img
                 src="/assets/img/ai-solution/standardized-workflows.jpg"
                 alt="Professional managing digital files next to an hourglass"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1067}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />{' '}
-              <Image
+              <img
                 src="/assets/img/ai-solution/better-collaboration.jpg"
                 alt="Two colleagues discussing notes and a tablet at a table"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={1068}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />{' '}
-              <Image
+              <img
                 src="/assets/img/ai-solution/better-governance2.jpg"
                 alt="Leadership team meeting in a conference room with monitors"
                 className="ws-img"
                 crossOrigin="anonymous"
                 width={1600}
                 height={900}
-                sizes="(min-width: 1024px) 60vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
               <canvas className="ws-canvas" aria-hidden="true" />
             </div>

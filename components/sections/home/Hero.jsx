@@ -1,5 +1,3 @@
-import { optimizedImage } from '@/lib/media';
-
 // HERO with background video
 export default function Hero() {
   return (
@@ -13,7 +11,7 @@ export default function Hero() {
         loop
         playsInline
         preload="auto"
-        poster={optimizedImage('/assets/img/hero-home-banner-img.jpg')}
+        poster="/assets/img/hero-home-banner-img.jpg"
       >
         <source src="/assets/videos/clovity-federal-home.mp4" type="video/mp4" />
       </video>

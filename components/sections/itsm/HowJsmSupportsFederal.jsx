@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 // Six JSM capabilities mapped to controls
@@ -93,73 +92,79 @@ export default function HowJsmSupportsFederal() {
           <div className="spot-media" aria-hidden="true">
             <div className="spot-frame">
               <div className="spot-panel is-active">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-incidents.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={830}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Incidents</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-service-request.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={738}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Service requests</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-changes.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={738}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Changes</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-asset-record.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={733}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Asset records</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-knowledge.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={1100}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Knowledge</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/itsm/jsm-security-request.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1100}
                   height={619}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">JSM capability</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Security requests</p>

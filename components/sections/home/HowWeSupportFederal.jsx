@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
 
@@ -9,13 +8,14 @@ export default function HowWeSupportFederal() {
       <div className="dot-grid absolute inset-y-0 right-0 w-1/2 opacity-60" />
       <div className="relative mx-auto grid max-w-site items-center gap-8 lg:gap-16 px-4 sm:px-6 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-[767px] lg:max-w-none">
-          <Image
+          <img
             src="/assets/img/home/modern-tech-office2.jpg"
             alt="A modern open office with rows of staff working at laptops"
             className="aspect-[4/5] w-full rounded-lg object-cover shadow-lift sm:aspect-[5/5]"
             width={1536}
             height={1024}
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute -bottom-8 right-3 max-w-[280px] rounded-lg bg-white p-5 shadow-lift sm:-right-8 sm:p-6">
             <div className="mb-4 h-1 w-12 rounded-full bg-accent" />

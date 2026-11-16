@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
 import { formatDate } from '@/lib/cms';
@@ -33,13 +32,14 @@ export default function BlogCard({ post, className = '' }) {
   return (
     <Link href={post.href} className={`${CARD} ${className}`}>
       <div className="overflow-hidden">
-        <Image
+        <img
           src={post.image.src}
           alt={post.image.alt}
           className={IMAGE}
           width={post.image.width}
           height={post.image.height}
-          sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw"
+          loading="lazy"
+          decoding="async"
         />
       </div>
       <div className="flex flex-1 flex-col p-5">
@@ -58,14 +58,14 @@ export function FeaturedBlogCard({ post, className = '' }) {
     <Link href={post.href} className={`${CARD} lg:grid lg:grid-cols-[1.1fr_1fr] ${className}`}>
       {/* Centered, so if the text runs a little taller than the image the spare space splits above and below it */}
       <div className="flex items-center overflow-hidden bg-sand">
-        <Image
+        <img
           src={post.image.src}
           alt={post.image.alt}
           className={IMAGE}
           width={post.image.width}
           height={post.image.height}
-          sizes="(min-width: 1024px) 420px, 100vw"
-          priority
+          fetchPriority="high"
+          decoding="async"
         />
       </div>
       <div className="flex flex-col justify-center p-4 lg:px-5 lg:py-4">

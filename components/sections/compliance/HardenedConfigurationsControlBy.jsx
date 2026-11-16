@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 // Control families mapped to platform configuration (tabs)
@@ -53,13 +52,14 @@ export default function HardenedConfigurationsControlBy() {
         </div>
         <div className="mt-14">
           <div data-panel="ac" className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-            <Image
+            <img
               src="/assets/img/compliance/access-control2.jpg"
               alt="People at a laptop with a digital overlay of user icons and highlighted groups"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              decoding="async"
             />
             <div>
               <h3 className="text-black font-display text-2xl font-medium sm:text-3xl">Least privilege, by design</h3>
@@ -88,13 +88,14 @@ export default function HardenedConfigurationsControlBy() {
             </div>
           </div>
           <div data-panel="au" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-            <Image
+            <img
               src="/assets/img/compliance/au-audit.jpg"
               alt="Two people reviewing printed charts and reports at a desk"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1067}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              decoding="async"
             />
             <div>
               <h3 className="text-black font-display text-2xl font-medium sm:text-3xl">A trail your auditors can follow</h3>
@@ -121,13 +122,14 @@ export default function HardenedConfigurationsControlBy() {
             </div>
           </div>
           <div data-panel="cm" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-            <Image
+            <img
               src="/assets/img/compliance/cm-configuration.jpg"
               alt="A person at a laptop with a project timeline overlay showing staged changes"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1000}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              decoding="async"
             />
             <div>
               <h3 className="text-black font-display text-2xl font-medium sm:text-3xl">Change that ships with its controls</h3>
@@ -156,13 +158,14 @@ export default function HardenedConfigurationsControlBy() {
             </div>
           </div>
           <div data-panel="ia" className="hidden grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
-            <Image
+            <img
               src="/assets/img/compliance/ia-identity.jpg"
               alt="A person signing in on a phone login screen"
               className="mx-auto w-full max-w-[767px] lg:max-w-none aspect-[4/3] rounded-lg object-cover shadow-lift"
               width={1600}
               height={1068}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              loading="lazy"
+              decoding="async"
             />
             <div>
               <h3 className="text-black font-display text-2xl font-medium sm:text-3xl">Your identity provider stays in charge</h3>

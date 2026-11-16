@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
 import { formatDate } from '@/lib/cms';
@@ -89,7 +88,7 @@ function PostList({ posts }) {
         <li key={post.id} className={i > 0 ? 'border-t border-ink-900/10' : ''}>
           <Link href={post.href} className={`group flex items-center gap-3.5 pb-3 ${i > 0 ? 'pt-3' : ''}`}>
             <span className="relative h-[58px] w-[76px] shrink-0 overflow-hidden rounded-md bg-sand">
-              <Image src={post.image.src} alt="" fill sizes="76px" />
+              <img src={post.image.src} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" decoding="async" />
             </span>
             <span className="min-w-0">
               <span className="text-black line-clamp-2 font-medium leading-snug group-hover:text-accent">{post.title}</span>

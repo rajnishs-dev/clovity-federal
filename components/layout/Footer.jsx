@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -7,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-site gap-12 px-4 py-16 sm:px-6 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Link href="/" className="inline-block">
-            <Image src="/assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" className="h-12 w-auto" width={154} height={48} />
+            <img src="/assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" className="h-12 w-auto" width={154} height={48} loading="lazy" decoding="async" />
           </Link>
           <p className="mt-6 max-w-sm leading-relaxed">
             Secure Atlassian configuration, migration and support for federal, state and local government, documented for your ATO.

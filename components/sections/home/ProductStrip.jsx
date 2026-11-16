@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 // Product strip
 export default function ProductStrip() {
@@ -7,23 +6,23 @@ export default function ProductStrip() {
       <div className="mx-auto max-w-site px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
           <span className="flex items-center gap-1.5 text-xl font-semibold text-ink-800">
-            <Image src="/assets/img/icons/jira-icon.svg" alt="" className="h-9 w-9" width={300} height={300} />
+            <img src="/assets/img/icons/jira-icon.svg" alt="" className="h-9 w-9" width={300} height={300} loading="lazy" decoding="async" />
             Jira
           </span>{' '}
           <span className="flex items-center gap-1.5 text-xl font-semibold text-ink-800">
-            <Image src="/assets/img/icons/confluence-icon.svg" alt="" className="h-9 w-9" width={300} height={300} />
+            <img src="/assets/img/icons/confluence-icon.svg" alt="" className="h-9 w-9" width={300} height={300} loading="lazy" decoding="async" />
             Confluence
           </span>{' '}
           <span className="flex items-center gap-1.5 text-xl font-semibold text-ink-800">
-            <Image src="/assets/img/icons/jsm-icon.svg" alt="" className="h-9 w-9" width={134} height={134} />
+            <img src="/assets/img/icons/jsm-icon.svg" alt="" className="h-9 w-9" width={134} height={134} loading="lazy" decoding="async" />
             Jira Service Management
           </span>{' '}
           <span className="flex items-center gap-1.5 text-xl font-semibold text-ink-800">
-            <Image src="/assets/img/icons/bitbucket-icon.svg" alt="" className="h-9 w-9" width={134} height={134} />
+            <img src="/assets/img/icons/bitbucket-icon.svg" alt="" className="h-9 w-9" width={134} height={134} loading="lazy" decoding="async" />
             Bitbucket
           </span>{' '}
           <span className="flex items-center gap-1.5 text-xl font-semibold text-ink-800">
-            <Image src="/assets/img/icons/government-cloud-icon.svg" alt="" className="h-9 w-9" width={32} height={32} />
+            <img src="/assets/img/icons/government-cloud-icon.svg" alt="" className="h-9 w-9" width={32} height={32} loading="lazy" decoding="async" />
             Atlassian Government Cloud
           </span>
         </div>

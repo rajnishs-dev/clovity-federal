@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 export default function MarketsWeServe() {
@@ -68,52 +67,56 @@ export default function MarketsWeServe() {
           <div className="spot-media" aria-hidden="true">
             <div className="spot-frame">
               <div className="spot-panel is-active">
-                <Image
+                <img
                   src="/assets/img/home/federal-civilian2.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1585}
                   height={992}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Federal civilian</p>
                 <p className="mt-4 text-white/70">FISMA &middot; NIST SP 800-53 &middot; FedRAMP Moderate via AGC</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/home/defense-atlassian.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1600}
                   height={897}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Defense</p>
                 <p className="mt-4 text-white/70">DevSecOps &middot; Jira and Bitbucket &middot; Impact levels stated plainly</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/home/state-and-local.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1600}
                   height={900}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">State &amp; local</p>
                 <p className="mt-4 text-white/70">CJIS &middot; StateRAMP or GovRAMP &middot; State privacy rules</p>
               </div>
               <div className="spot-panel">
-                <Image
+                <img
                   src="/assets/img/home/prime-contractor2.jpg"
                   className="spot-panel-img"
                   alt=""
                   width={1600}
                   height={1067}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <p className="eyebrow text-accent-light">Market</p>
                 <p className="mt-3 font-display text-4xl font-medium tracking-tight">Prime contractors</p>

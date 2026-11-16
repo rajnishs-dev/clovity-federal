@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
@@ -64,14 +63,14 @@ export default async function BlogPostPage({ params }) {
 
               {/* The banner at its own aspect ratio - never cropped */}
               <div className="mb-6 overflow-hidden rounded-lg shadow-lift">
-                <Image
+                <img
                   src={post.image.src}
                   alt={post.image.alt}
                   className="block h-auto max-h-[520px] w-full bg-sand object-contain"
                   width={post.image.width}
                   height={post.image.height}
-                  sizes="(min-width: 1024px) 860px, 100vw"
-                  priority
+                  fetchPriority="high"
+                  decoding="async"
                 />
               </div>
 

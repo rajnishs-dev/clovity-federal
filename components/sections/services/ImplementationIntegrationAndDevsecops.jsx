@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 export default function ImplementationIntegrationAndDevsecops() {
@@ -6,13 +5,14 @@ export default function ImplementationIntegrationAndDevsecops() {
     <section id="professional" className="scroll-mt-24 bg-sand py-16 lg:py-24">
       <div className="mx-auto grid max-w-site items-center gap-8 lg:gap-14 px-4 sm:px-6 lg:grid-cols-2">
         <div data-clip="" className="overflow-hidden rounded-lg shadow-lift mx-auto w-full max-w-[767px] lg:max-w-none lg:order-2">
-          <Image
+          <img
             src="/assets/img/services/devsecops-implementation2.jpg"
             alt="A desk with a monitor showing the DevSecOps loop, below Jira, Confluence, Jira Service Management and Bitbucket logos"
             className="h-auto w-full object-cover"
             width={1080}
             height={800}
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div>

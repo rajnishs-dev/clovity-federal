@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Icon from '@/components/ui/Icon';
-import { optimizedImage } from '@/lib/media';
 
 // Closing call to action on every page: a light black overlay over a fixed photo of the Capitol, one headline, one line, one button.
 // "sand" puts the light blue band behind it; the homepage uses a taller box with a lighter overlay ("tall").
@@ -10,7 +9,7 @@ export default function CtaBanner({ title, children, sand = false, tall = false 
       {/* Fixed background image. No transform on this container, or the fixed attachment stops working. */}
       <div
         className={`relative mx-auto max-w-site overflow-hidden rounded-lg bg-black bg-cover bg-center lg:bg-fixed px-6 py-20 text-center text-white sm:px-16 ${tall ? 'sm:py-28' : 'sm:py-24'}`}
-        style={{ backgroundImage: `url('${optimizedImage('/assets/img/us-capitol-clouds.jpg')}')` }}
+        style={{ backgroundImage: `url('/assets/img/us-capitol-clouds.jpg')` }}
       >
         <div className="absolute inset-0" style={{ backgroundColor: `rgb(0 0 0 / ${tall ? 0.3 : 0.4})` }} />
         <div className="relative">

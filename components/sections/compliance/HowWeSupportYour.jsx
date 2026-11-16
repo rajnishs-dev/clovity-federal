@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 // Method: Assess / Architect / Operationalize / Evolve, applied to ATO support
@@ -19,13 +18,14 @@ export default function HowWeSupportYour() {
         <ol className="grid gap-6 px-4 sm:px-6 md:grid-cols-2 xl:grid-cols-4">
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
-              <Image
+              <img
                 src="/assets/img/compliance/assess2.jpg"
                 alt="Consultants reviewing documents against a screen"
                 className="h-44 w-full object-cover"
                 width={1200}
                 height={800}
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="mt-6 flex items-start justify-between gap-4">
@@ -52,13 +52,14 @@ export default function HowWeSupportYour() {
           </li>
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
-              <Image
+              <img
                 src="/assets/img/compliance/architect4.jpg"
                 alt="Engineer at a workstation in a data center"
                 className="h-44 w-full object-cover"
                 width={1200}
                 height={800}
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="mt-6 flex items-start justify-between gap-4">
@@ -85,13 +86,14 @@ export default function HowWeSupportYour() {
           </li>
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
-              <Image
+              <img
                 src="/assets/img/compliance/operationalize3.jpg"
                 alt="Team reviewing a dashboard on a monitor"
                 className="h-44 w-full object-cover"
                 width={1200}
                 height={633}
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="mt-6 flex items-start justify-between gap-4">
@@ -118,13 +120,14 @@ export default function HowWeSupportYour() {
           </li>
           <li className="hpanel">
             <div className="overflow-hidden rounded-lg">
-              <Image
+              <img
                 src="/assets/img/compliance/evolve3.jpg"
                 alt="Two engineers reviewing code in a server room"
                 className="h-44 w-full object-cover"
                 width={1200}
                 height={675}
-                sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="mt-6 flex items-start justify-between gap-4">

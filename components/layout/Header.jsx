@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Icon from '@/components/ui/Icon';
@@ -130,8 +129,8 @@ export default function Header() {
     <header id="site-header" data-solid={solid ? 'true' : undefined} className={headerClass}>
       <div className="mx-auto flex h-20 max-w-site items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center" aria-label="Clovity Federal home">
-          <Image src="/assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" className="logo-light h-11 w-auto" width={141} height={44} priority />
-          <Image src="/assets/img/clovity-fed-logo.png" alt="Clovity Federal" className="logo-dark hidden h-11 w-auto" width={141} height={44} priority />
+          <img src="/assets/img/clovity-fed-logo-white.png" alt="Clovity Federal" className="logo-light h-11 w-auto" width={141} height={44} fetchPriority="high" decoding="async" />
+          <img src="/assets/img/clovity-fed-logo.png" alt="Clovity Federal" className="logo-dark hidden h-11 w-auto" width={141} height={44} fetchPriority="high" decoding="async" />
         </Link>
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
           {MENUS.map(menu => {

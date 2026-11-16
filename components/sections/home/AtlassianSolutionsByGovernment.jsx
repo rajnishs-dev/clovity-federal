@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Icon from '@/components/ui/Icon';
 
 // Sectors: expanding accordion (click a tab to open it)
@@ -75,13 +74,14 @@ export default function AtlassianSolutionsByGovernment() {
                     </ul>
                   </div>
                 </div>
-                <Image
+                <img
                   src="/assets/img/home/federal-civilian2.jpg"
                   alt="An analyst reviewing a security dashboard on a tablet in front of server racks"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1585}
                   height={992}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -147,13 +147,14 @@ export default function AtlassianSolutionsByGovernment() {
                     </ul>
                   </div>
                 </div>
-                <Image
+                <img
                   src="/assets/img/home/defense-atlassian.jpg"
                   alt="Server racks with blue and yellow network cabling"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1600}
                   height={897}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -215,13 +216,14 @@ export default function AtlassianSolutionsByGovernment() {
                     </ul>
                   </div>
                 </div>
-                <Image
+                <img
                   src="/assets/img/home/state-and-local.jpg"
                   alt="People working at desks and lounge seating inside a multi-level public library"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1600}
                   height={900}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
@@ -281,13 +283,14 @@ export default function AtlassianSolutionsByGovernment() {
                     </ul>
                   </div>
                 </div>
-                <Image
+                <img
                   src="/assets/img/home/prime-contractor2.jpg"
                   alt="A team working together at computers"
                   className="order-first h-64 w-full rounded-lg object-cover sm:h-80 lg:order-none lg:h-full"
                   width={1600}
                   height={1067}
-                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             </div>
